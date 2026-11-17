@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "bio:dna-polymerase",
+  "name": "DNA polymerase",
+  "aliases": [
+    "DNA polymerases"
+  ],
+  "definitions": {
+    "simple": "An enzyme that copies DNA by adding nucleotides to a growing strand.",
+    "scientific": "DNA polymerases catalyze template-directed addition of deoxyribonucleotides to a primer's free 3′ hydroxyl group, synthesizing DNA 5′→3′; some have proofreading activity."
+  },
+  "sources": [
+    "ref:openstax-replication"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

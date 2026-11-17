@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:autocrine-signaling",
+  "name": "Autocrine signaling",
+  "aliases": [],
+  "definitions": {
+    "simple": "When a cell releases a chemical signal that also acts on itself.",
+    "scientific": "Autocrine signaling occurs when a cell secretes a mediator that binds receptors on that same cell, providing local self-regulation or feedback."
+  },
+  "sources": [
+    "ref:openstax-receptors"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

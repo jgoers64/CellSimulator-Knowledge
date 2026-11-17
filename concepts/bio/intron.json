@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "bio:intron",
+  "name": "Intron",
+  "aliases": [
+    "introns"
+  ],
+  "definitions": {
+    "simple": "A segment cut out of a precursor RNA during splicing.",
+    "scientific": "An intron is an intervening sequence transcribed into precursor RNA but excised during RNA processing, often by spliceosomal catalysis in eukaryotes."
+  },
+  "sources": [
+    "ref:openstax-transcription"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

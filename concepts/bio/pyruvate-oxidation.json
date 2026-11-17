@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:pyruvate-oxidation",
+  "name": "Pyruvate oxidation",
+  "aliases": [],
+  "definitions": {
+    "simple": "Converting pyruvate into acetyl-CoA before it enters the citric acid cycle.",
+    "scientific": "Pyruvate oxidation transfers a pyruvate-derived acetyl group onto coenzyme A, releasing carbon dioxide and reducing NAD+ to NADH, commonly via pyruvate dehydrogenase."
+  },
+  "sources": [
+    "ref:openstax-tca"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

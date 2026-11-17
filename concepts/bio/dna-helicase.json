@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:dna-helicase",
+  "name": "DNA helicase",
+  "aliases": [],
+  "definitions": {
+    "simple": "A molecular motor that separates the two strands of DNA.",
+    "scientific": "DNA helicase uses energy from nucleoside triphosphate hydrolysis to translocate and unwind double-stranded DNA during replication or other DNA-processing reactions."
+  },
+  "sources": [
+    "ref:openstax-replication"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

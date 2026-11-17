@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:paracrine-signaling",
+  "name": "Paracrine signaling",
+  "aliases": [],
+  "definitions": {
+    "simple": "When a cell releases a signal that acts on nearby cells.",
+    "scientific": "Paracrine signaling consists of local mediators acting on neighboring cells over relatively short distances, rather than primarily traveling through circulation to distant tissues."
+  },
+  "sources": [
+    "ref:openstax-receptors"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "chem:oxidation",
+  "name": "Oxidation",
+  "aliases": [],
+  "definitions": {
+    "simple": "A chemical change in which an atom or molecule loses electrons.",
+    "scientific": "Oxidation is an increase in oxidation state, usually involving electron loss; in metabolism it often occurs through transfer of hydrogen atoms, hydride, or electrons."
+  },
+  "sources": [
+    "ref:openstax-tca",
+    "ref:openstax-oxphos"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

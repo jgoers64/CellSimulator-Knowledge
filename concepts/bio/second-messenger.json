@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "bio:second-messenger",
+  "name": "Second messenger",
+  "aliases": [
+    "second messengers"
+  ],
+  "definitions": {
+    "simple": "A small internal molecule or ion that relays or amplifies a signal.",
+    "scientific": "A second messenger is an intracellular signaling species, such as cAMP, calcium ions, or IP3, whose abundance or distribution changes downstream of receptor stimulation."
+  },
+  "sources": [
+    "ref:openstax-transduction"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

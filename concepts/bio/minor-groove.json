@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "bio:minor-groove",
+  "name": "DNA minor groove",
+  "aliases": [
+    "minor groove"
+  ],
+  "definitions": {
+    "simple": "The narrower channel along typical B-form DNA that can also bind proteins and small molecules.",
+    "scientific": "The minor groove is the narrower recurring surface channel of B-DNA, exposing a different set of base-pair functional groups and shape features used in recognition."
+  },
+  "sources": [
+    "ref:openstax-dna"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

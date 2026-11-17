@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "bio:rna-splicing",
+  "name": "RNA splicing",
+  "aliases": [
+    "splicing"
+  ],
+  "definitions": {
+    "simple": "Removal of introns and joining of exons in an RNA transcript.",
+    "scientific": "RNA splicing excises intervening RNA segments and ligates flanking exons, commonly through a spliceosome for eukaryotic protein-coding precursor mRNAs."
+  },
+  "sources": [
+    "ref:openstax-transcription"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "bio:eicosanoid",
+  "name": "Eicosanoid",
+  "aliases": [
+    "eicosanoids"
+  ],
+  "definitions": {
+    "simple": "A locally acting signaling lipid usually made from a 20-carbon fatty acid.",
+    "scientific": "Eicosanoids are oxygenated lipid mediators derived mainly from 20-carbon polyunsaturated fatty acids, including prostaglandins, leukotrienes, thromboxanes, and lipoxins."
+  },
+  "sources": [
+    "ref:ncbi-eicosanoids"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

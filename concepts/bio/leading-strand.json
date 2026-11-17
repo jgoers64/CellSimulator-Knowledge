@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:leading-strand",
+  "name": "Leading strand",
+  "aliases": [],
+  "definitions": {
+    "simple": "The new DNA strand made continuously in the direction the replication fork moves.",
+    "scientific": "The leading strand is polymerized continuously toward an advancing replication fork because its template's polarity supports 5′→3′ DNA synthesis in that direction."
+  },
+  "sources": [
+    "ref:openstax-replication"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

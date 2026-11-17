@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "bio:g-protein",
+  "name": "G protein",
+  "aliases": [
+    "guanine nucleotide-binding protein"
+  ],
+  "definitions": {
+    "simple": "A protein that acts as a switch by binding GDP or GTP.",
+    "scientific": "Guanine nucleotide-binding proteins cycle between GDP-associated and GTP-associated states; nucleotide exchange activates many G proteins and GTP hydrolysis contributes to signal termination."
+  },
+  "sources": [
+    "ref:openstax-receptors",
+    "ref:openstax-transduction"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:glycolysis",
+  "name": "Glycolysis",
+  "aliases": [],
+  "definitions": {
+    "simple": "A pathway that turns glucose into pyruvate while capturing some energy.",
+    "scientific": "Glycolysis is a cytosolic metabolic pathway converting a glucose molecule into two pyruvate molecules, with a net production of two ATP and two NADH in standard accounting."
+  },
+  "sources": [
+    "ref:openstax-glycolysis"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

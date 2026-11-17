@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "bio:prostaglandin",
+  "name": "Prostaglandin",
+  "aliases": [
+    "prostaglandins"
+  ],
+  "definitions": {
+    "simple": "A short-lived lipid signal involved in inflammation and other local processes.",
+    "scientific": "Prostaglandins are cyclooxygenase-pathway eicosanoids containing a characteristic ring structure; they signal through receptors to regulate inflammation, vascular tone, and tissue homeostasis."
+  },
+  "sources": [
+    "ref:ncbi-eicosanoids"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

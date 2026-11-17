@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "chem:cholesterol",
+  "name": "Cholesterol",
+  "aliases": [],
+  "definitions": {
+    "simple": "A membrane lipid that also serves as a starting material for making steroid hormones and bile acids.",
+    "scientific": "Cholesterol is a four-ring sterol with a hydroxyl group that modulates animal membrane properties and serves as a biosynthetic precursor of bile acids, steroid hormones, and vitamin D."
+  },
+  "sources": [
+    "ref:openstax-lipids",
+    "ref:openstax-membrane"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

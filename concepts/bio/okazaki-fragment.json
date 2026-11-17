@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "bio:okazaki-fragment",
+  "name": "Okazaki fragment",
+  "aliases": [
+    "Okazaki fragments"
+  ],
+  "definitions": {
+    "simple": "A short piece of DNA made when copying the lagging strand.",
+    "scientific": "An Okazaki fragment is a newly synthesized lagging-strand segment initiated from a primer, subsequently processed and covalently joined to adjacent fragments."
+  },
+  "sources": [
+    "ref:openstax-replication"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

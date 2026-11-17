@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:signal-transduction",
+  "name": "Signal transduction",
+  "aliases": [],
+  "definitions": {
+    "simple": "How a cell turns a detected signal into a series of internal changes.",
+    "scientific": "Signal transduction converts a molecular or physical stimulus into downstream cellular events, commonly through conformational changes, second messengers, and enzyme cascades."
+  },
+  "sources": [
+    "ref:openstax-transduction"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

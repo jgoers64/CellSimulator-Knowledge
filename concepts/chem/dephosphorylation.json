@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "chem:dephosphorylation",
+  "name": "Dephosphorylation",
+  "aliases": [],
+  "definitions": {
+    "simple": "Removing a phosphate group from a molecule.",
+    "scientific": "Dephosphorylation removes a phosphoryl group, frequently through phosphatase-catalyzed hydrolysis, and can reverse or reshape phosphorylation-dependent regulation."
+  },
+  "sources": [
+    "ref:openstax-transduction"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

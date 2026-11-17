@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:atp-synthase",
+  "name": "ATP synthase",
+  "aliases": [],
+  "definitions": {
+    "simple": "A membrane enzyme that uses ion flow to make ATP from ADP and phosphate.",
+    "scientific": "ATP synthase is a rotary membrane-associated enzyme that couples ion transport, generally proton flow down an electrochemical gradient, to ATP synthesis from ADP and inorganic phosphate."
+  },
+  "sources": [
+    "ref:openstax-oxphos"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

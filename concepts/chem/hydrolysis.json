@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "chem:hydrolysis",
+  "name": "Hydrolysis",
+  "aliases": [],
+  "definitions": {
+    "simple": "A reaction that uses water to break a chemical bond.",
+    "scientific": "Hydrolysis is bond cleavage involving water as a reactant, with fragments acquiring components derived from water; reaction free energy depends on the system and conditions."
+  },
+  "sources": [
+    "ref:openstax-atp",
+    "ref:openstax-enzymes"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

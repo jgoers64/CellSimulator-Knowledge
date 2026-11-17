@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "chem:sterol",
+  "name": "Sterol",
+  "aliases": [],
+  "definitions": {
+    "simple": "A type of lipid with a four-ring structure and an alcohol group.",
+    "scientific": "A sterol is a steroid alcohol with a tetracyclic core and hydroxyl group; sterols contribute to eukaryotic membrane organization and serve as metabolic precursors."
+  },
+  "sources": [
+    "ref:openstax-lipids"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

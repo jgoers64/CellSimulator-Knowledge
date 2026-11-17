@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:dna-ligase",
+  "name": "DNA ligase",
+  "aliases": [],
+  "definitions": {
+    "simple": "An enzyme that seals breaks in the sugar–phosphate backbone of DNA.",
+    "scientific": "DNA ligase forms a phosphodiester bond between juxtaposed 3′-hydroxyl and 5′-phosphate ends in DNA, sealing nicks using ATP or NAD+-dependent chemistry."
+  },
+  "sources": [
+    "ref:openstax-replication"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

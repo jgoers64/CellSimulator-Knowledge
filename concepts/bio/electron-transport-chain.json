@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "bio:electron-transport-chain",
+  "name": "Electron transport chain",
+  "aliases": [
+    "ETC"
+  ],
+  "definitions": {
+    "simple": "A set of electron-carrying proteins that helps create an energy-storing ion gradient.",
+    "scientific": "An electron transport chain transfers electrons through membrane-associated redox carriers to a terminal acceptor, coupling electron transfer to electrochemical-gradient generation."
+  },
+  "sources": [
+    "ref:openstax-oxphos"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

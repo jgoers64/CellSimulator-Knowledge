@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:replication-fork",
+  "name": "Replication fork",
+  "aliases": [],
+  "definitions": {
+    "simple": "The Y-shaped place where DNA is opened and new strands are made.",
+    "scientific": "A replication fork is the moving junction between parental duplex DNA and exposed templates, where helicases, polymerases, and accessory factors coordinate new DNA synthesis."
+  },
+  "sources": [
+    "ref:openstax-replication"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

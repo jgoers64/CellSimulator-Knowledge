@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "bio:gpcr",
+  "name": "G protein-coupled receptor",
+  "aliases": [
+    "GPCR"
+  ],
+  "definitions": {
+    "simple": "A membrane receptor that can activate a G protein when a suitable signal binds.",
+    "scientific": "A G protein-coupled receptor usually contains seven transmembrane helices and promotes guanine-nucleotide exchange on heterotrimeric G proteins following activation."
+  },
+  "sources": [
+    "ref:openstax-receptors"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

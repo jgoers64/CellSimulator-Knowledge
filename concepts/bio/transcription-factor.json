@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:transcription-factor",
+  "name": "Transcription factor",
+  "aliases": [],
+  "definitions": {
+    "simple": "A protein that helps turn the transcription of particular genes up or down.",
+    "scientific": "A transcription factor is a protein that regulates gene transcription by binding specific DNA sequences or interacting with transcriptional machinery and associated regulatory proteins."
+  },
+  "sources": [
+    "ref:openstax-transcription"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

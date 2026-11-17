@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "bio:rna-polymerase",
+  "name": "RNA polymerase",
+  "aliases": [
+    "RNA polymerases"
+  ],
+  "definitions": {
+    "simple": "An enzyme that uses DNA as a template to make RNA.",
+    "scientific": "RNA polymerase catalyzes template-directed RNA synthesis by connecting ribonucleotides via phosphodiester bonds, extending RNA 5′→3′ while reading template DNA 3′→5′."
+  },
+  "sources": [
+    "ref:openstax-transcription"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

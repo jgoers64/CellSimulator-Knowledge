@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "chem:reduction",
+  "name": "Reduction",
+  "aliases": [],
+  "definitions": {
+    "simple": "A chemical change in which an atom or molecule gains electrons.",
+    "scientific": "Reduction is a decrease in oxidation state, generally associated with electron gain, and is coupled to oxidation in biochemical electron-transfer reactions."
+  },
+  "sources": [
+    "ref:openstax-tca",
+    "ref:openstax-oxphos"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

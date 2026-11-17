@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "chem:atp",
+  "name": "Adenosine triphosphate",
+  "aliases": [
+    "ATP"
+  ],
+  "definitions": {
+    "simple": "A nucleotide used by cells to transfer chemical energy and phosphate groups.",
+    "scientific": "ATP is an adenine-containing ribonucleotide with three phosphate groups; exergonic ATP hydrolysis or phosphoryl transfer can be coupled to biosynthesis, transport, and mechanical work."
+  },
+  "sources": [
+    "ref:openstax-atp"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "bio:complementary-base-pairing",
+  "name": "Complementary base pairing",
+  "aliases": [],
+  "definitions": {
+    "simple": "The preferential matching of bases across nucleic acid strands.",
+    "scientific": "Complementary base pairing involves sequence-dependent hydrogen-bonding geometries, predominantly A–T and G–C in canonical DNA duplexes and A–U and G–C in RNA duplexes."
+  },
+  "sources": [
+    "ref:openstax-nucleic",
+    "ref:openstax-dna"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

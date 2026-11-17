@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:chemiosmosis",
+  "name": "Chemiosmosis",
+  "aliases": [],
+  "definitions": {
+    "simple": "Using the flow of ions down a membrane gradient to power work such as ATP production.",
+    "scientific": "Chemiosmosis couples the movement of ions down an electrochemical gradient, typically proton movement, to work performed by membrane protein complexes such as ATP synthase."
+  },
+  "sources": [
+    "ref:openstax-oxphos"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

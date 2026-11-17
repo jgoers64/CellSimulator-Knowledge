@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "bio:protein-kinase",
+  "name": "Protein kinase",
+  "aliases": [
+    "kinase"
+  ],
+  "definitions": {
+    "simple": "An enzyme that puts phosphate groups onto proteins.",
+    "scientific": "A protein kinase transfers a phosphoryl group, most commonly from ATP, to specific amino-acid residues of substrates, including serine, threonine, or tyrosine."
+  },
+  "sources": [
+    "ref:openstax-transduction"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

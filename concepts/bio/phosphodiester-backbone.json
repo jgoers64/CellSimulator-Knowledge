@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:phosphodiester-backbone",
+  "name": "Phosphodiester backbone",
+  "aliases": [],
+  "definitions": {
+    "simple": "The repeating sugar–phosphate chain that holds DNA or RNA nucleotides together.",
+    "scientific": "A phosphodiester backbone comprises alternating pentose sugars and phosphate moieties connected by 3′–5′ phosphodiester linkages, imparting directionality to nucleic acid strands."
+  },
+  "sources": [
+    "ref:openstax-nucleic"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "bio:leukotriene",
+  "name": "Leukotriene",
+  "aliases": [
+    "leukotrienes"
+  ],
+  "definitions": {
+    "simple": "A lipid signal that can influence inflammation, immune cells, and the airways.",
+    "scientific": "Leukotrienes are lipoxygenase-derived eicosanoids, often originating from arachidonic acid, with signaling roles in leukocyte recruitment and bronchial smooth-muscle responses."
+  },
+  "sources": [
+    "ref:ncbi-eicosanoids"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

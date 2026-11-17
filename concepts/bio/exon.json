@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "bio:exon",
+  "name": "Exon",
+  "aliases": [
+    "exons"
+  ],
+  "definitions": {
+    "simple": "A section of a gene whose sequence remains in the processed RNA.",
+    "scientific": "An exon is a region retained in mature RNA following splicing; exons can include protein-coding sequence or untranslated regions."
+  },
+  "sources": [
+    "ref:openstax-transcription"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

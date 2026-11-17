@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:lagging-strand",
+  "name": "Lagging strand",
+  "aliases": [],
+  "definitions": {
+    "simple": "The new DNA strand assembled from short pieces that are later joined.",
+    "scientific": "The lagging strand is synthesized discontinuously as Okazaki fragments because its template orientation opposes fork movement while DNA polymerization remains 5′→3′."
+  },
+  "sources": [
+    "ref:openstax-replication"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

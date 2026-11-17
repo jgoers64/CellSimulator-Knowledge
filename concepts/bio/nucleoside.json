@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:nucleoside",
+  "name": "Nucleoside",
+  "aliases": [],
+  "definitions": {
+    "simple": "A nitrogen-containing base attached to a sugar, without phosphate groups.",
+    "scientific": "A nucleoside consists of a nucleobase linked to a pentose sugar, usually ribose or deoxyribose; phosphorylation yields a nucleotide."
+  },
+  "sources": [
+    "ref:openstax-nucleic"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

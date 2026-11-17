@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "bio:protein-phosphatase",
+  "name": "Protein phosphatase",
+  "aliases": [
+    "phosphatase"
+  ],
+  "definitions": {
+    "simple": "An enzyme that removes phosphate groups from proteins.",
+    "scientific": "A protein phosphatase catalyzes the dephosphorylation of phosphorylated protein residues, modifying signaling states and potentially reversing kinase-mediated regulation."
+  },
+  "sources": [
+    "ref:openstax-transduction"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

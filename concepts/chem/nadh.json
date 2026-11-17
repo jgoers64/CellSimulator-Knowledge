@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "chem:nadh",
+  "name": "NADH",
+  "aliases": [],
+  "definitions": {
+    "simple": "An electron-carrying molecule used in cellular energy metabolism.",
+    "scientific": "NADH is the reduced form of nicotinamide adenine dinucleotide and transfers reducing equivalents, often as a hydride, between enzymes involved in metabolic redox reactions."
+  },
+  "sources": [
+    "ref:openstax-glycolysis",
+    "ref:openstax-oxphos"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

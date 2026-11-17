@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "bio:nucleotide-triphosphate",
+  "name": "Nucleotide triphosphate",
+  "aliases": [
+    "nucleoside triphosphate",
+    "NTP"
+  ],
+  "definitions": {
+    "simple": "A nucleotide with three phosphate groups, used in energy transfer or nucleic acid synthesis.",
+    "scientific": "A nucleoside triphosphate contains a base, pentose, and triphosphate chain; ribonucleoside triphosphates supply RNA synthesis and deoxyribonucleoside triphosphates supply DNA synthesis."
+  },
+  "sources": [
+    "ref:openstax-nucleic"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

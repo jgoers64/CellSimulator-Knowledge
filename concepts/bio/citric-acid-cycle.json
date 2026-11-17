@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "bio:citric-acid-cycle",
+  "name": "Citric acid cycle",
+  "aliases": [
+    "Krebs cycle",
+    "TCA cycle"
+  ],
+  "definitions": {
+    "simple": "A cyclic pathway that extracts electrons from acetyl groups and regenerates its starting compound.",
+    "scientific": "The citric acid cycle oxidizes acetyl-CoA-derived carbon to carbon dioxide, produces NADH and FADH2, generates a nucleotide triphosphate equivalent, and regenerates oxaloacetate."
+  },
+  "sources": [
+    "ref:openstax-tca"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

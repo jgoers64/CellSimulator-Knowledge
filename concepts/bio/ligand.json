@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:ligand",
+  "name": "Ligand",
+  "aliases": [],
+  "definitions": {
+    "simple": "A molecule or ion that binds to another molecule at a particular site.",
+    "scientific": "A ligand is an ion or molecule that associates with a receptor, protein, or binding partner via specific interactions; binding need not activate its partner."
+  },
+  "sources": [
+    "ref:openstax-receptors"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

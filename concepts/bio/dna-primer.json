@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "bio:dna-primer",
+  "name": "DNA synthesis primer",
+  "aliases": [
+    "replication primer"
+  ],
+  "definitions": {
+    "simple": "A short strand that provides the starting end for DNA polymerase.",
+    "scientific": "A DNA synthesis primer is an RNA or DNA oligonucleotide containing a free 3′-hydroxyl terminus required for polymerase extension; replication primers are usually produced by primase."
+  },
+  "sources": [
+    "ref:openstax-replication"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

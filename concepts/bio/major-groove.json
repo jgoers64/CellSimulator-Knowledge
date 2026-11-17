@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "bio:major-groove",
+  "name": "DNA major groove",
+  "aliases": [
+    "major groove"
+  ],
+  "definitions": {
+    "simple": "The wider channel running along typical B-form DNA where proteins can read base patterns.",
+    "scientific": "The major groove is the wider recurring channel in B-DNA produced by asymmetric backbone geometry, exposing base-edge chemical groups for molecular recognition."
+  },
+  "sources": [
+    "ref:openstax-dna"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

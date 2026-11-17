@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "chem:phosphorylation",
+  "name": "Phosphorylation",
+  "aliases": [],
+  "definitions": {
+    "simple": "Adding a phosphate-containing group to a molecule.",
+    "scientific": "Phosphorylation is incorporation or transfer of a phosphoryl group to a substrate, often through kinase-catalyzed transfer from ATP, altering molecular energy or regulation."
+  },
+  "sources": [
+    "ref:openstax-atp",
+    "ref:openstax-transduction"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:promoter",
+  "name": "Promoter",
+  "aliases": [],
+  "definitions": {
+    "simple": "A stretch of DNA that helps begin transcription of a nearby gene.",
+    "scientific": "A promoter is a cis-acting DNA region that recruits or positions transcription machinery and defines where RNA synthesis starts, helping control gene expression."
+  },
+  "sources": [
+    "ref:openstax-transcription"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "bio:proton-gradient",
+  "name": "Proton electrochemical gradient",
+  "aliases": [
+    "proton gradient",
+    "proton-motive force"
+  ],
+  "definitions": {
+    "simple": "A difference in proton concentration and electrical charge across a membrane that stores energy.",
+    "scientific": "The proton electrochemical gradient combines electrical membrane potential with a proton chemical-potential difference; the resulting proton-motive force can drive ATP synthesis."
+  },
+  "sources": [
+    "ref:openstax-oxphos"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

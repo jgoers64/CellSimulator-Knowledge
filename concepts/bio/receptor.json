@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "bio:receptor",
+  "name": "Cellular receptor",
+  "aliases": [
+    "receptor protein"
+  ],
+  "definitions": {
+    "simple": "A protein that detects a signal and can cause a cell to respond.",
+    "scientific": "A cellular receptor binds a ligand or senses a stimulus and couples the recognition event to an intracellular biochemical or electrical response."
+  },
+  "sources": [
+    "ref:openstax-receptors"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "chem:adp",
+  "name": "Adenosine diphosphate",
+  "aliases": [
+    "ADP"
+  ],
+  "definitions": {
+    "simple": "A two-phosphate nucleotide that cells can phosphorylate to regenerate ATP.",
+    "scientific": "ADP is an adenine-containing ribonucleotide bearing two phosphate groups; cellular energy-conversion pathways phosphorylate ADP to regenerate ATP."
+  },
+  "sources": [
+    "ref:openstax-atp"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}
