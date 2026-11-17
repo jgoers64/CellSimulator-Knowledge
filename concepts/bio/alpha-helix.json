@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "bio:alpha-helix",
+  "name": "Alpha helix",
+  "aliases": [
+    "α-helix",
+    "alpha helices"
+  ],
+  "definitions": {
+    "simple": "A spiral-shaped section of a protein chain stabilized by hydrogen bonds along its backbone.",
+    "scientific": "An alpha helix is a regular right-handed polypeptide-backbone conformation in proteins, stabilized by hydrogen bonding between backbone C=O and N–H groups, typically separated by four residues in sequence."
+  },
+  "sources": [
+    "ref:openstax-proteins"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:protein"
+    },
+    {
+      "type": "related",
+      "target": "chem:hydrogen-bond"
+    }
+  ],
+  "status": "source_checked"
+}
