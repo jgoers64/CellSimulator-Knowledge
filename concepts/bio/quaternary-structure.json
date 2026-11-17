@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "bio:quaternary-structure",
+  "name": "Quaternary structure",
+  "aliases": [
+    "quaternary protein structure"
+  ],
+  "definitions": {
+    "simple": "The way two or more protein chains fit together to work as one complex.",
+    "scientific": "Quaternary structure describes the spatial arrangement and interactions of two or more polypeptide subunits assembled into a functional protein complex; proteins with a single polypeptide chain lack quaternary structure."
+  },
+  "sources": [
+    "ref:openstax-proteins"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:protein"
+    },
+    {
+      "type": "related",
+      "target": "bio:polypeptide"
+    }
+  ],
+  "status": "source_checked"
+}
