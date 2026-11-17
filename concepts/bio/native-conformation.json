@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:native-conformation",
+  "name": "Native conformation",
+  "aliases": [],
+  "definitions": {
+    "simple": "A protein's usual functional arrangement under a particular set of conditions.",
+    "scientific": "A native conformation is a biologically functional, thermodynamically favored or kinetically maintained folded state under specified conditions; proteins can populate multiple native conformations."
+  },
+  "sources": [
+    "ref:openstax-proteins"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

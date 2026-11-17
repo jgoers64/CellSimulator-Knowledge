@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "chem:saturated-fatty-acid",
+  "name": "Saturated fatty acid",
+  "aliases": [],
+  "definitions": {
+    "simple": "A fatty acid whose carbon chain contains no carbon–carbon double bonds.",
+    "scientific": "A saturated fatty acid has a hydrocarbon chain containing only carbon–carbon single bonds; its packing characteristics depend on chain length and surrounding lipids."
+  },
+  "sources": [
+    "ref:openstax-lipids"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

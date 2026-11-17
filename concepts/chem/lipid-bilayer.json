@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "chem:lipid-bilayer",
+  "name": "Lipid bilayer",
+  "aliases": [],
+  "definitions": {
+    "simple": "Two layers of lipids arranged with their water-facing heads outside and tails inside.",
+    "scientific": "A lipid bilayer is a self-assembled two-leaflet membrane structure in which amphipathic lipids orient polar headgroups toward aqueous surroundings and nonpolar regions toward the interior."
+  },
+  "sources": [
+    "ref:openstax-membrane"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "chem:omega-3-fatty-acid",
+  "name": "Omega-3 fatty acid",
+  "aliases": [
+    "n-3 fatty acid"
+  ],
+  "definitions": {
+    "simple": "A fatty acid whose first double bond is three carbons from the methyl end.",
+    "scientific": "An omega-3 (n-3) fatty acid is an unsaturated fatty acid in which the double bond nearest the terminal methyl group begins at carbon 3 when counted from that end."
+  },
+  "sources": [
+    "ref:openstax-lipids"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

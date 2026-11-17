@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "chem:reducing-sugar",
+  "name": "Reducing sugar",
+  "aliases": [],
+  "definitions": {
+    "simple": "A sugar that can react as a mild reducing agent because its anomeric center is available.",
+    "scientific": "A reducing sugar contains a free anomeric center able to equilibrate with a reactive open-chain carbonyl form, allowing reduction of suitable oxidizing reagents."
+  },
+  "sources": [
+    "ref:openstax-carb"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

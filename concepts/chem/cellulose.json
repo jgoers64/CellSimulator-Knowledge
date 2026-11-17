@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "chem:cellulose",
+  "name": "Cellulose",
+  "aliases": [],
+  "definitions": {
+    "simple": "A strong structural carbohydrate found in plant cell walls.",
+    "scientific": "Cellulose is a mostly linear polysaccharide of beta-D-glucose residues joined by beta(1→4) glycosidic bonds; hydrogen bonding among chains contributes to the strength of plant cell walls."
+  },
+  "sources": [
+    "ref:openstax-carb"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

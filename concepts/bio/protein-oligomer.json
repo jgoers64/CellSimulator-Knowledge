@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:protein-oligomer",
+  "name": "Protein oligomer",
+  "aliases": [],
+  "definitions": {
+    "simple": "A protein assembly made from a small number of connected subunits.",
+    "scientific": "A protein oligomer is a complex containing two or more associated polypeptide subunits, which may be identical or different; oligomerization can alter stability and activity."
+  },
+  "sources": [
+    "ref:openstax-proteins"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

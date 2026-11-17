@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "chem:ester-bond",
+  "name": "Ester bond",
+  "aliases": [],
+  "definitions": {
+    "simple": "A covalent connection commonly formed between a carboxylic acid and an alcohol.",
+    "scientific": "An ester linkage contains the -C(=O)-O- connectivity produced by condensation of a carboxylic acid and alcohol or by equivalent acyl-transfer chemistry; hydrolysis reverses ester formation."
+  },
+  "sources": [
+    "ref:openstax-lipids"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

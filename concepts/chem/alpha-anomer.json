@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "chem:alpha-anomer",
+  "name": "Alpha anomer",
+  "aliases": [],
+  "definitions": {
+    "simple": "A cyclic sugar form with one of the two possible arrangements at its anomeric carbon.",
+    "scientific": "The alpha anomer is the cyclic carbohydrate stereoisomer whose anomeric substituent has the alpha configuration relative to the reference stereocenter; it is not defined simply as pointing down in all ring drawings."
+  },
+  "sources": [
+    "ref:openstax-carb"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

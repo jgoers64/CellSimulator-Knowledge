@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "bio:proteinogenic-amino-acid",
+  "name": "Proteinogenic amino acid",
+  "aliases": [
+    "proteinogenic amino acids"
+  ],
+  "definitions": {
+    "simple": "An amino acid that cells can incorporate into proteins during translation.",
+    "scientific": "A proteinogenic amino acid is an amino acid incorporated into a polypeptide by the ribosomal translation machinery; most proteins use the 20 standard amino acids, with selenocysteine and pyrrolysine in certain organisms."
+  },
+  "sources": [
+    "ref:openstax-proteins",
+    "ref:openstax-translation"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

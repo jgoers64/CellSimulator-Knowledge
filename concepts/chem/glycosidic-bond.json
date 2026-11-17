@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "chem:glycosidic-bond",
+  "name": "Glycosidic bond",
+  "aliases": [],
+  "definitions": {
+    "simple": "A covalent bond that connects a sugar to another group, often another sugar.",
+    "scientific": "A glycosidic bond links a sugar's anomeric center to an oxygen, nitrogen, sulfur, or carbon atom of another group; O-glycosidic linkages commonly join monosaccharides."
+  },
+  "sources": [
+    "ref:openstax-carb"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

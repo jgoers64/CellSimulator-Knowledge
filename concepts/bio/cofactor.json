@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:cofactor",
+  "name": "Cofactor",
+  "aliases": [],
+  "definitions": {
+    "simple": "A nonprotein component, such as a metal ion, that an enzyme needs for its activity.",
+    "scientific": "An enzyme cofactor is an inorganic ion or organic component required for catalytic function or structural integrity; organic cofactors are commonly called coenzymes."
+  },
+  "sources": [
+    "ref:openstax-enzymes"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

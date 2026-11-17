@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:protein-subunit",
+  "name": "Protein subunit",
+  "aliases": [],
+  "definitions": {
+    "simple": "One protein chain that contributes to a larger protein complex.",
+    "scientific": "A protein subunit is an individual polypeptide component of an oligomeric protein complex, assembled with other subunits through noncovalent contacts or covalent links."
+  },
+  "sources": [
+    "ref:openstax-proteins"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:protein-motif",
+  "name": "Protein motif",
+  "aliases": [],
+  "definitions": {
+    "simple": "A recurring short pattern in a protein's sequence or three-dimensional structure.",
+    "scientific": "A protein motif is a conserved amino-acid sequence pattern or local structural arrangement associated with a recurring molecular feature; it is generally smaller than a domain."
+  },
+  "sources": [
+    "ref:openstax-proteins"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

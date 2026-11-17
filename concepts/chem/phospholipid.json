@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "chem:phospholipid",
+  "name": "Phospholipid",
+  "aliases": [],
+  "definitions": {
+    "simple": "A lipid with a phosphate-containing head and hydrophobic tails that helps build cell membranes.",
+    "scientific": "A phospholipid is an amphipathic lipid containing a phosphate-bearing polar group and nonpolar hydrocarbon regions; glycerophospholipids and sphingomyelin are major membrane phospholipids."
+  },
+  "sources": [
+    "ref:openstax-lipids",
+    "ref:openstax-membrane"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

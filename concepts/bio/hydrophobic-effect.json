@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "bio:hydrophobic-effect",
+  "name": "Hydrophobic effect",
+  "aliases": [],
+  "definitions": {
+    "simple": "The tendency of nonpolar parts of molecules to gather away from water.",
+    "scientific": "The hydrophobic effect is the solvent-mediated free-energy preference for reducing water-exposed nonpolar surface area; it contributes strongly to protein folding and membrane assembly."
+  },
+  "sources": [
+    "ref:openstax-proteins",
+    "ref:openstax-membrane"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

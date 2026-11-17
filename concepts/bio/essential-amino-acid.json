@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "bio:essential-amino-acid",
+  "name": "Essential amino acid",
+  "aliases": [
+    "essential amino acids"
+  ],
+  "definitions": {
+    "simple": "An amino acid that humans must obtain from food because they cannot make enough of it.",
+    "scientific": "An essential amino acid is one that cannot be synthesized de novo in sufficient quantities to meet an organism's requirements and therefore must be supplied by the diet."
+  },
+  "sources": [
+    "ref:openstax-proteins"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "chem:monosaccharide",
+  "name": "Monosaccharide",
+  "aliases": [
+    "simple sugar"
+  ],
+  "definitions": {
+    "simple": "A single sugar unit that cannot be split into smaller sugars by hydrolysis.",
+    "scientific": "A monosaccharide is a polyhydroxy aldehyde or ketone, or a related derivative, constituting the basic monomeric unit of many carbohydrates."
+  },
+  "sources": [
+    "ref:openstax-carb"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

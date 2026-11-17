@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "chem:unsaturated-fatty-acid",
+  "name": "Unsaturated fatty acid",
+  "aliases": [],
+  "definitions": {
+    "simple": "A fatty acid with at least one carbon–carbon double bond in its chain.",
+    "scientific": "An unsaturated fatty acid contains one or more carbon–carbon double bonds; double-bond position and cis/trans geometry influence molecular conformation and membrane packing."
+  },
+  "sources": [
+    "ref:openstax-lipids"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

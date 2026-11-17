@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "chem:polyunsaturated-fatty-acid",
+  "name": "Polyunsaturated fatty acid",
+  "aliases": [
+    "PUFA"
+  ],
+  "definitions": {
+    "simple": "A fatty acid with two or more carbon–carbon double bonds.",
+    "scientific": "A polyunsaturated fatty acid contains at least two carbon–carbon double bonds, creating geometry and chemical reactivity that depend on their positions and configurations."
+  },
+  "sources": [
+    "ref:openstax-lipids"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

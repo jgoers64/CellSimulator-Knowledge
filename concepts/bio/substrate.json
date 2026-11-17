@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "bio:substrate",
+  "name": "Enzyme substrate",
+  "aliases": [
+    "substrate of an enzyme"
+  ],
+  "definitions": {
+    "simple": "A molecule that an enzyme acts on during a chemical reaction.",
+    "scientific": "An enzyme substrate is a reactant that binds to an enzyme and is converted into one or more products during a catalytic cycle."
+  },
+  "sources": [
+    "ref:openstax-enzymes"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

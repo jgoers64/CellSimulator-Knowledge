@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "bio:glycosylation",
+  "name": "Glycosylation",
+  "aliases": [],
+  "definitions": {
+    "simple": "The addition of sugar groups to a protein, lipid, or another molecule.",
+    "scientific": "Glycosylation is an enzymatic process that covalently attaches carbohydrate units to proteins, lipids, or other acceptors, affecting folding, trafficking, recognition, and stability."
+  },
+  "sources": [
+    "ref:openstax-carb",
+    "ref:openstax-proteins"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "chem:disaccharide",
+  "name": "Disaccharide",
+  "aliases": [],
+  "definitions": {
+    "simple": "A sugar made from two monosaccharides joined together.",
+    "scientific": "A disaccharide consists of two monosaccharide residues connected by a glycosidic linkage; hydrolysis can release the constituent monosaccharides."
+  },
+  "sources": [
+    "ref:openstax-carb"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

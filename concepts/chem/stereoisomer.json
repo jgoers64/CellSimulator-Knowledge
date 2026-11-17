@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "chem:stereoisomer",
+  "name": "Stereoisomer",
+  "aliases": [],
+  "definitions": {
+    "simple": "A molecule with the same atom connections as another molecule but a different arrangement in space.",
+    "scientific": "Stereoisomers have identical molecular connectivity but differ in spatial arrangement, including enantiomers and diastereomers; these differences can strongly affect biochemical recognition."
+  },
+  "sources": [
+    "ref:openstax-carb"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

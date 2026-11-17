@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "bio:cooperativity",
+  "name": "Cooperative binding",
+  "aliases": [
+    "cooperativity"
+  ],
+  "definitions": {
+    "simple": "When one molecule binding to a protein changes how readily other molecules bind.",
+    "scientific": "Cooperative binding occurs when ligand occupancy at one binding site changes the affinity of other sites; positive cooperativity increases and negative cooperativity decreases subsequent binding affinity."
+  },
+  "sources": [
+    "ref:openstax-proteins",
+    "ref:openstax-enzymes"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

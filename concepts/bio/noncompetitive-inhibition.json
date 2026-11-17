@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:noncompetitive-inhibition",
+  "name": "Noncompetitive inhibition",
+  "aliases": [],
+  "definitions": {
+    "simple": "When an inhibitor reduces enzyme activity without competing directly for the substrate's binding site.",
+    "scientific": "In pure noncompetitive inhibition, an inhibitor binds enzyme and enzyme–substrate complex with equal affinity, decreasing maximal velocity without altering the Michaelis constant; mixed inhibition is more common."
+  },
+  "sources": [
+    "ref:openstax-enzymes"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

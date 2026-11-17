@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "chem:amphipathic",
+  "name": "Amphipathic",
+  "aliases": [
+    "amphiphilic"
+  ],
+  "definitions": {
+    "simple": "Having both a region that interacts favorably with water and a region that avoids water.",
+    "scientific": "An amphipathic molecule contains distinct hydrophilic and hydrophobic regions, enabling self-assembly into structures such as micelles and lipid bilayers in aqueous environments."
+  },
+  "sources": [
+    "ref:openstax-lipids",
+    "ref:openstax-membrane"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

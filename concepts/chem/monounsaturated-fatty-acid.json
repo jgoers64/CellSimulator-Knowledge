@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "chem:monounsaturated-fatty-acid",
+  "name": "Monounsaturated fatty acid",
+  "aliases": [
+    "MUFA"
+  ],
+  "definitions": {
+    "simple": "A fatty acid with exactly one carbon–carbon double bond.",
+    "scientific": "A monounsaturated fatty acid possesses a single carbon–carbon double bond in its hydrocarbon chain, as in oleic acid."
+  },
+  "sources": [
+    "ref:openstax-lipids"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

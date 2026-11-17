@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "chem:aldose",
+  "name": "Aldose",
+  "aliases": [],
+  "definitions": {
+    "simple": "A sugar whose open-chain form contains an aldehyde group.",
+    "scientific": "An aldose is a monosaccharide containing an aldehyde functional group in its acyclic form; many aldoses predominantly occupy cyclic hemiacetal forms in water."
+  },
+  "sources": [
+    "ref:openstax-carb"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

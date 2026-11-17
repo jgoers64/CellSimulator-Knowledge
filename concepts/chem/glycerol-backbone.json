@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "chem:glycerol-backbone",
+  "name": "Glycerol backbone",
+  "aliases": [],
+  "definitions": {
+    "simple": "The three-carbon framework to which fatty acids or other groups attach in many lipids.",
+    "scientific": "The glycerol backbone is the three-carbon triol-derived scaffold whose hydroxyl positions can carry fatty-acyl esters and phosphate-containing substituents in glycerolipids."
+  },
+  "sources": [
+    "ref:openstax-lipids"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:competitive-inhibition",
+  "name": "Competitive inhibition",
+  "aliases": [],
+  "definitions": {
+    "simple": "When an inhibitor competes with a substrate for an enzyme's active site.",
+    "scientific": "Competitive inhibition occurs when inhibitor and substrate binding are mutually exclusive, often at the active site; increasing substrate concentration can overcome reversible competitive inhibition."
+  },
+  "sources": [
+    "ref:openstax-enzymes"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

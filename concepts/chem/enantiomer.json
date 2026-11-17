@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "chem:enantiomer",
+  "name": "Enantiomer",
+  "aliases": [],
+  "definitions": {
+    "simple": "One of a pair of molecules that are mirror images but cannot be lined up perfectly.",
+    "scientific": "Enantiomers are nonsuperimposable mirror-image stereoisomers with opposite configurations at every corresponding stereogenic center in a chiral molecule."
+  },
+  "sources": [
+    "ref:openstax-carb"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

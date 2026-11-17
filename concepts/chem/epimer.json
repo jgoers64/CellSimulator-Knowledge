@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "chem:epimer",
+  "name": "Epimer",
+  "aliases": [],
+  "definitions": {
+    "simple": "One of two sugars that differ in their arrangement at just one chiral carbon.",
+    "scientific": "Epimers are diastereomers that differ in configuration at exactly one stereogenic center while all other stereogenic centers retain the same configurations."
+  },
+  "sources": [
+    "ref:openstax-carb"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

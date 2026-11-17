@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:protein-folding",
+  "name": "Protein folding",
+  "aliases": [],
+  "definitions": {
+    "simple": "The process by which a chain of amino acids takes on its three-dimensional shape.",
+    "scientific": "Protein folding is the acquisition of a polypeptide's conformational ensemble and often its native functional structure, governed by sequence-dependent intramolecular and solvent interactions."
+  },
+  "sources": [
+    "ref:openstax-proteins"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

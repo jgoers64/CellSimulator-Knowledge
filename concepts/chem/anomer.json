@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "chem:anomer",
+  "name": "Anomer",
+  "aliases": [],
+  "definitions": {
+    "simple": "One of two forms of a cyclic sugar that differ at the carbon created when the ring forms.",
+    "scientific": "Anomers are cyclic carbohydrate stereoisomers differing only in configuration at the anomeric carbon formed during intramolecular hemiacetal or hemiketal formation."
+  },
+  "sources": [
+    "ref:openstax-carb"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

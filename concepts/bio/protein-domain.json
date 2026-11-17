@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "bio:protein-domain",
+  "name": "Protein domain",
+  "aliases": [
+    "domain of a protein"
+  ],
+  "definitions": {
+    "simple": "A section of a protein that can often fold and perform a distinct function.",
+    "scientific": "A protein domain is a compact structural or functional unit within a polypeptide, often capable of semi-independent folding and reused across unrelated protein architectures."
+  },
+  "sources": [
+    "ref:openstax-proteins"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

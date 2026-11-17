@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "chem:ketose",
+  "name": "Ketose",
+  "aliases": [],
+  "definitions": {
+    "simple": "A sugar whose open-chain form contains a ketone group.",
+    "scientific": "A ketose is a monosaccharide with a ketone functional group in its open-chain form; fructose is a common ketohexose."
+  },
+  "sources": [
+    "ref:openstax-carb"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

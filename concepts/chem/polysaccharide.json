@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "chem:polysaccharide",
+  "name": "Polysaccharide",
+  "aliases": [],
+  "definitions": {
+    "simple": "A carbohydrate chain made of many connected sugar units.",
+    "scientific": "A polysaccharide is a polymer of numerous monosaccharide residues joined through glycosidic bonds; its linkage geometry and branching determine structural and biological properties."
+  },
+  "sources": [
+    "ref:openstax-carb"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

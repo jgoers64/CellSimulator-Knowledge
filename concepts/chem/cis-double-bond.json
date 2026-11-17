@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "chem:cis-double-bond",
+  "name": "Cis double bond",
+  "aliases": [],
+  "definitions": {
+    "simple": "A double bond whose attached groups lie on the same side, often bending a fatty-acid chain.",
+    "scientific": "A cis carbon–carbon double bond places designated substituents on the same side of the double-bond axis; cis unsaturation commonly introduces a kink into fatty-acid chains."
+  },
+  "sources": [
+    "ref:openstax-lipids"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

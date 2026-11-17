@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "chem:omega-6-fatty-acid",
+  "name": "Omega-6 fatty acid",
+  "aliases": [
+    "n-6 fatty acid"
+  ],
+  "definitions": {
+    "simple": "A fatty acid whose first double bond is six carbons from the methyl end.",
+    "scientific": "An omega-6 (n-6) fatty acid is an unsaturated fatty acid whose double bond nearest the terminal methyl group begins at carbon 6 when numbered from the omega end."
+  },
+  "sources": [
+    "ref:openstax-lipids"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

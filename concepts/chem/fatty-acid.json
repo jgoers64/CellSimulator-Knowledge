@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "chem:fatty-acid",
+  "name": "Fatty acid",
+  "aliases": [],
+  "definitions": {
+    "simple": "A molecule with a long carbon chain and a carboxylic acid group.",
+    "scientific": "A fatty acid is an aliphatic monocarboxylic acid, frequently with an unbranched hydrocarbon chain, that can occur free or esterified in complex lipids."
+  },
+  "sources": [
+    "ref:openstax-lipids"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

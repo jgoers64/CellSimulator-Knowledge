@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:enzyme-specificity",
+  "name": "Enzyme specificity",
+  "aliases": [],
+  "definitions": {
+    "simple": "An enzyme's preference for certain molecules or chemical reactions.",
+    "scientific": "Enzyme specificity is the selective recognition and catalysis of particular substrates, bond transformations, or stereochemical outcomes through the active site's three-dimensional chemistry."
+  },
+  "sources": [
+    "ref:openstax-enzymes"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

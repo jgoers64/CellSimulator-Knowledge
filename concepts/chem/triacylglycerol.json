@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "chem:triacylglycerol",
+  "name": "Triacylglycerol",
+  "aliases": [
+    "triglyceride"
+  ],
+  "definitions": {
+    "simple": "A storage fat made from glycerol connected to three fatty acids.",
+    "scientific": "A triacylglycerol is a neutral lipid in which all three hydroxyl groups of glycerol are esterified to fatty-acyl groups; it is a major form of energy storage."
+  },
+  "sources": [
+    "ref:openstax-lipids"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "bio:binding-site",
+  "name": "Binding site",
+  "aliases": [],
+  "definitions": {
+    "simple": "A region of a molecule where another molecule attaches in a specific way.",
+    "scientific": "A binding site is a region of a macromolecule whose shape and chemical environment favor association with a particular ligand or molecular partner through complementary interactions."
+  },
+  "sources": [
+    "ref:openstax-proteins",
+    "ref:openstax-enzymes"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

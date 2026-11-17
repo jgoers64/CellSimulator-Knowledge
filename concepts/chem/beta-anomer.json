@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "chem:beta-anomer",
+  "name": "Beta anomer",
+  "aliases": [],
+  "definitions": {
+    "simple": "A cyclic sugar form with the other possible arrangement at its anomeric carbon.",
+    "scientific": "The beta anomer is the cyclic carbohydrate stereoisomer with the beta configuration at the anomeric center relative to the reference stereocenter; its depiction depends on ring orientation and sugar family."
+  },
+  "sources": [
+    "ref:openstax-carb"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

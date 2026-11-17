@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "chem:trans-double-bond",
+  "name": "Trans double bond",
+  "aliases": [],
+  "definitions": {
+    "simple": "A double bond whose attached groups lie on opposite sides, generally making a chain straighter than its cis form.",
+    "scientific": "A trans carbon–carbon double bond places designated substituents on opposite sides; trans-unsaturated fatty-acid chains generally pack more like saturated chains than cis isomers."
+  },
+  "sources": [
+    "ref:openstax-lipids"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

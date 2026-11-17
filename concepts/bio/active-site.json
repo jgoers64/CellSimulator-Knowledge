@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:active-site",
+  "name": "Active site",
+  "aliases": [],
+  "definitions": {
+    "simple": "The part of an enzyme where its substrate binds and the chemical reaction occurs.",
+    "scientific": "An enzyme active site is the spatially organized region that recognizes substrate and provides catalytic groups or cofactors to lower the reaction's activation-energy barrier."
+  },
+  "sources": [
+    "ref:openstax-enzymes"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

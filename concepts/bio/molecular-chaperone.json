@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "bio:molecular-chaperone",
+  "name": "Molecular chaperone",
+  "aliases": [
+    "chaperone",
+    "molecular chaperones"
+  ],
+  "definitions": {
+    "simple": "A protein that helps another protein fold or avoid unwanted clumping.",
+    "scientific": "A molecular chaperone assists the folding, assembly, or quality control of other proteins without normally being part of their final structure; some chaperones use ATP."
+  },
+  "sources": [
+    "ref:openstax-proteins"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

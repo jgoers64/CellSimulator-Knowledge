@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "bio:allostery",
+  "name": "Allostery",
+  "aliases": [
+    "allosteric regulation"
+  ],
+  "definitions": {
+    "simple": "When binding or a change at one part of a protein affects what happens elsewhere on that protein.",
+    "scientific": "Allostery is the coupling of molecular states or ligand binding at one site to conformational or energetic changes that modify activity or affinity at another site."
+  },
+  "sources": [
+    "ref:openstax-enzymes"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}

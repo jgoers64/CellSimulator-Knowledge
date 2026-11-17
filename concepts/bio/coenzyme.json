@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "bio:coenzyme",
+  "name": "Coenzyme",
+  "aliases": [],
+  "definitions": {
+    "simple": "A small organic molecule that helps an enzyme carry out a reaction.",
+    "scientific": "A coenzyme is an organic cofactor that participates in enzyme catalysis, often transferring electrons or chemical groups; some bind transiently and others remain tightly associated."
+  },
+  "sources": [
+    "ref:openstax-enzymes"
+  ],
+  "relations": [],
+  "status": "source_checked"
+}
