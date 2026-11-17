@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "bio:side-chain",
+  "name": "Amino acid side chain",
+  "aliases": [
+    "R group",
+    "side chain",
+    "amino acid R group"
+  ],
+  "definitions": {
+    "simple": "The variable part of an amino acid that determines much of how it interacts with surrounding molecules.",
+    "scientific": "An amino acid side chain, often denoted R, is the substituent attached to its alpha carbon that differs among the standard amino acids and influences polarity, charge, steric properties, and protein folding."
+  },
+  "sources": [
+    "ref:openstax-proteins"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:amino-acid"
+    },
+    {
+      "type": "related",
+      "target": "bio:protein"
+    }
+  ],
+  "status": "source_checked"
+}
