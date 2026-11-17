@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "bio:codon",
+  "name": "Codon",
+  "aliases": [
+    "codons"
+  ],
+  "definitions": {
+    "simple": "A group of three nucleotides in messenger RNA that specifies an amino acid or a signal to stop translation.",
+    "scientific": "A codon is a nucleotide triplet in an mRNA reading frame that specifies an amino acid or translation termination under the genetic code."
+  },
+  "sources": [
+    "ref:openstax-code",
+    "ref:openstax-translation"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:messenger-rna"
+    },
+    {
+      "type": "related",
+      "target": "bio:translation"
+    },
+    {
+      "type": "related",
+      "target": "bio:amino-acid"
+    }
+  ],
+  "status": "source_checked"
+}

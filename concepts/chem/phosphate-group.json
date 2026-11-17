@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "chem:phosphate-group",
+  "name": "Phosphate group",
+  "aliases": [
+    "phosphate groups"
+  ],
+  "definitions": {
+    "simple": "A phosphorus-containing group with oxygen atoms that forms part of each nucleotide and of the sugar-phosphate backbone of DNA and RNA.",
+    "scientific": "A phosphate group in nucleotides contains a tetrahedral phosphorus-oxygen moiety; phosphate ester and phosphodiester linkages connect nucleic-acid sugar units."
+  },
+  "sources": [
+    "ref:openstax-nucleic"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:nucleotide"
+    },
+    {
+      "type": "related",
+      "target": "bio:dna"
+    }
+  ],
+  "status": "source_checked"
+}

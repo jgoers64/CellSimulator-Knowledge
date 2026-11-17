@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "bio:ribosome",
+  "name": "Ribosome",
+  "aliases": [
+    "ribosomes"
+  ],
+  "definitions": {
+    "simple": "A cell structure made of RNA and proteins that reads messenger RNA and builds a chain of amino acids.",
+    "scientific": "A ribosome is a ribonucleoprotein complex with small and large subunits that carries out translation and catalyzes formation of peptide bonds in a growing polypeptide."
+  },
+  "sources": [
+    "ref:openstax-translation",
+    "ref:openstax-nucleic"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:messenger-rna"
+    },
+    {
+      "type": "related",
+      "target": "bio:transfer-rna"
+    },
+    {
+      "type": "related",
+      "target": "bio:translation"
+    },
+    {
+      "type": "related",
+      "target": "bio:peptide-bond"
+    }
+  ],
+  "status": "source_checked"
+}

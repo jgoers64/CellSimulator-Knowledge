@@ -1,0 +1,29 @@
+name: Scientific knowledge (standalone)
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  validate:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            python: "3.12"
+          - os: windows-latest
+            python: "3.14"
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install editable standalone package
+        run: python -m pip install -e .
+      - name: Validate source data
+        run: python -m knowledge.knowledge_store validate
+      - name: Build SQLite index
+        run: python -m knowledge.knowledge_store build
+      - name: Test standalone backend
+        run: python -m unittest knowledge.tests.test_knowledge knowledge.tests.test_term_review -v

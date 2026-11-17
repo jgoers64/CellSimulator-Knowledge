@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "bio:protein",
+  "name": "Protein",
+  "aliases": [
+    "proteins"
+  ],
+  "definitions": {
+    "simple": "A molecule made from one or more chains of amino acids. Proteins perform many tasks in cells, including catalyzing reactions and providing structure.",
+    "scientific": "A protein is a biological macromolecule comprising one or more polypeptide chains that adopt a functional conformation, often in association with additional cofactors."
+  },
+  "sources": [
+    "ref:openstax-proteins"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:amino-acid"
+    },
+    {
+      "type": "related",
+      "target": "bio:polypeptide"
+    },
+    {
+      "type": "related",
+      "target": "bio:enzyme"
+    }
+  ],
+  "status": "source_checked"
+}

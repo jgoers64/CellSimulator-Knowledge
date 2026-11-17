@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "bio:adenine",
+  "name": "Adenine",
+  "aliases": [
+    "adenine base"
+  ],
+  "definitions": {
+    "simple": "One of the usual bases in DNA and RNA. In standard DNA base pairing, adenine pairs with thymine.",
+    "scientific": "Adenine is a purine nucleobase present in DNA and RNA; in canonical DNA Watson–Crick base pairs it hydrogen-bonds with thymine."
+  },
+  "sources": [
+    "ref:openstax-nucleic",
+    "ref:openstax-dna"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "chem:purine"
+    },
+    {
+      "type": "related",
+      "target": "bio:base-pair"
+    },
+    {
+      "type": "related",
+      "target": "bio:thymine"
+    }
+  ],
+  "status": "source_checked"
+}

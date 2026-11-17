@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "ref:iupac-pyrimidine",
+      "label": "IUPAC Gold Book — pyrimidine",
+      "url": "https://goldbook.iupac.org/terms/view/09718"
+    },
+    {
+      "id": "ref:openstax-dna",
+      "label": "OpenStax Biology 2e — DNA structure",
+      "url": "https://openstax.org/books/biology-2e/pages/14-2-dna-structure-and-sequencing"
+    },
+    {
+      "id": "ref:ncbi-composition",
+      "label": "NCBI Bookshelf — The Molecular Composition of Cells",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK9879/"
+    },
+    {
+      "id": "ref:ncbi-dna",
+      "label": "NCBI Bookshelf — Biochemistry, DNA Structure",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK538241/"
+    },
+    {
+      "id": "ref:openstax-proteins",
+      "label": "OpenStax Biology 2e — 3.4 Proteins",
+      "url": "https://openstax.org/books/biology-2e/pages/3-4-proteins"
+    },
+    {
+      "id": "ref:openstax-nucleic",
+      "label": "OpenStax Biology 2e — 3.5 Nucleic Acids",
+      "url": "https://openstax.org/books/biology-2e/pages/3-5-nucleic-acids"
+    },
+    {
+      "id": "ref:openstax-translation",
+      "label": "OpenStax Biology 2e — 15.5 Ribosomes and Protein Synthesis",
+      "url": "https://openstax.org/books/biology-2e/pages/15-5-ribosomes-and-protein-synthesis"
+    },
+    {
+      "id": "ref:openstax-code",
+      "label": "OpenStax Biology 2e — 15.1 The Genetic Code",
+      "url": "https://openstax.org/books/biology-2e/pages/15-1-the-genetic-code"
+    },
+    {
+      "id": "ref:openstax-bonds",
+      "label": "OpenStax Anatomy and Physiology 2e — 2.2 Chemical Bonds",
+      "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/2-2-chemical-bonds"
+    },
+    {
+      "id": "ref:openstax-genes",
+      "label": "OpenStax Biology 2e — 15 Chapter Summary",
+      "url": "https://openstax.org/books/biology-2e/pages/15-chapter-summary"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "bio:cytosine",
+  "name": "Cytosine",
+  "aliases": [
+    "C base"
+  ],
+  "definitions": {
+    "simple": "One of the four standard DNA bases. Cytosine is a pyrimidine and usually pairs with guanine in double-stranded DNA.",
+    "scientific": "Cytosine is a pyrimidine nucleobase found in DNA and RNA. In canonical Watson–Crick pairing, cytosine forms a complementary base pair with guanine."
+  },
+  "sources": [
+    "ref:openstax-dna",
+    "ref:ncbi-dna"
+  ],
+  "relations": [
+    {
+      "type": "example_of",
+      "target": "chem:pyrimidine"
+    }
+  ],
+  "status": "source_checked"
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "bio:nucleotide",
+  "name": "Nucleotide",
+  "aliases": [
+    "nucleotides"
+  ],
+  "definitions": {
+    "simple": "A molecular unit made of a nitrogen-containing base, a sugar, and one or more phosphate groups. Nucleotides form DNA and RNA.",
+    "scientific": "A nucleotide consists of a nucleobase attached to a pentose sugar with one or more phosphate groups. Nucleotides polymerize through phosphodiester linkages in nucleic acids."
+  },
+  "sources": [
+    "ref:ncbi-composition",
+    "ref:openstax-dna"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:deoxyribonucleotide"
+    },
+    {
+      "type": "part_of",
+      "target": "bio:dna"
+    }
+  ],
+  "status": "source_checked"
+}

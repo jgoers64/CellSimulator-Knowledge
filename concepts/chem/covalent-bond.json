@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "chem:covalent-bond",
+  "name": "Covalent bond",
+  "aliases": [
+    "covalent bonds"
+  ],
+  "definitions": {
+    "simple": "A chemical bond in which atoms share electrons.",
+    "scientific": "A covalent bond arises from electron density shared between atoms, forming a chemical linkage with a characteristic bond length and energy."
+  },
+  "sources": [
+    "ref:openstax-bonds"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:peptide-bond"
+    },
+    {
+      "type": "related",
+      "target": "chem:hydrogen-bond"
+    }
+  ],
+  "status": "source_checked"
+}

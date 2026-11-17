@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "bio:ribonucleotide",
+  "name": "Ribonucleotide",
+  "aliases": [
+    "RNA nucleotide"
+  ],
+  "definitions": {
+    "simple": "A nucleotide containing ribose sugar, a nitrogenous base, and one or more phosphate groups. Ribonucleotides are the building blocks of RNA.",
+    "scientific": "A ribonucleotide is a nucleobase-linked ribose with one or more phosphate groups. Its ribose retains a hydroxyl group at the 2′ position, unlike a deoxyribonucleotide."
+  },
+  "sources": [
+    "ref:openstax-nucleic"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:nucleotide"
+    },
+    {
+      "type": "related",
+      "target": "bio:rna"
+    },
+    {
+      "type": "related",
+      "target": "chem:ribose"
+    }
+  ],
+  "status": "source_checked"
+}

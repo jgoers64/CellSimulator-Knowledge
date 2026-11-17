@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "bio:messenger-rna",
+  "name": "Messenger RNA",
+  "aliases": [
+    "mRNA",
+    "messenger ribonucleic acid"
+  ],
+  "definitions": {
+    "simple": "An RNA message copied from genetic information that a ribosome reads to make a protein.",
+    "scientific": "Messenger RNA (mRNA) is an RNA transcript carrying a sequence of codons that can direct polypeptide synthesis during translation."
+  },
+  "sources": [
+    "ref:openstax-translation",
+    "ref:openstax-nucleic"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:rna"
+    },
+    {
+      "type": "related",
+      "target": "bio:codon"
+    },
+    {
+      "type": "related",
+      "target": "bio:ribosome"
+    }
+  ],
+  "status": "source_checked"
+}

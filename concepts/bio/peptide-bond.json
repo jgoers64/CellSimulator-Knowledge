@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "bio:peptide-bond",
+  "name": "Peptide bond",
+  "aliases": [
+    "peptide bonds"
+  ],
+  "definitions": {
+    "simple": "The covalent connection between two amino-acid residues in a peptide or protein.",
+    "scientific": "A peptide bond is an amide linkage formed between the carboxyl group of one amino acid and the amino group of another, with the elimination of water in a condensation reaction."
+  },
+  "sources": [
+    "ref:openstax-proteins"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:amino-acid"
+    },
+    {
+      "type": "related",
+      "target": "bio:polypeptide"
+    },
+    {
+      "type": "related",
+      "target": "chem:covalent-bond"
+    }
+  ],
+  "status": "source_checked"
+}

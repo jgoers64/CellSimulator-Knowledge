@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "bio:anticodon",
+  "name": "Anticodon",
+  "aliases": [
+    "anticodons"
+  ],
+  "definitions": {
+    "simple": "A three-nucleotide region of transfer RNA that pairs with a matching codon in messenger RNA during protein synthesis.",
+    "scientific": "An anticodon is a three-nucleotide sequence in a tRNA that base-pairs with a complementary mRNA codon during ribosomal translation."
+  },
+  "sources": [
+    "ref:openstax-translation"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:transfer-rna"
+    },
+    {
+      "type": "related",
+      "target": "bio:codon"
+    },
+    {
+      "type": "related",
+      "target": "bio:translation"
+    }
+  ],
+  "status": "source_checked"
+}

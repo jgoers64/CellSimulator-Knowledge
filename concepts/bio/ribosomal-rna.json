@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "bio:ribosomal-rna",
+  "name": "Ribosomal RNA",
+  "aliases": [
+    "rRNA"
+  ],
+  "definitions": {
+    "simple": "The RNA molecules that form the structural and catalytic core of a ribosome, working together with ribosomal proteins.",
+    "scientific": "Ribosomal RNA (rRNA) is a family of RNA molecules that combine with proteins to constitute ribosomal subunits and participate directly in ribosome structure and catalytic function."
+  },
+  "sources": [
+    "ref:openstax-translation"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:rna"
+    },
+    {
+      "type": "related",
+      "target": "bio:ribosome"
+    }
+  ],
+  "status": "source_checked"
+}

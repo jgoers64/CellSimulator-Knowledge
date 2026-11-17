@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "chem:ribose",
+  "name": "Ribose",
+  "aliases": [
+    "D-ribose"
+  ],
+  "definitions": {
+    "simple": "The five-carbon sugar found in RNA nucleotides. It has an oxygen-containing hydroxyl group at its 2′ carbon.",
+    "scientific": "Ribose is a pentose sugar whose 2′ carbon bears a hydroxyl group; ribose is the carbohydrate constituent of ribonucleotides in RNA."
+  },
+  "sources": [
+    "ref:openstax-nucleic"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "chem:deoxyribose"
+    },
+    {
+      "type": "related",
+      "target": "bio:ribonucleotide"
+    }
+  ],
+  "status": "source_checked"
+}

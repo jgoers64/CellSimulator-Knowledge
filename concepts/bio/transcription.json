@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "bio:transcription",
+  "name": "Transcription",
+  "aliases": [
+    "RNA transcription"
+  ],
+  "definitions": {
+    "simple": "The process of making an RNA copy using a DNA sequence as a template.",
+    "scientific": "Transcription is the synthesis of RNA by an RNA polymerase using a DNA template strand, producing an RNA sequence complementary to the template."
+  },
+  "sources": [
+    "ref:openstax-genes",
+    "ref:openstax-nucleic"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:dna"
+    },
+    {
+      "type": "related",
+      "target": "bio:rna"
+    },
+    {
+      "type": "related",
+      "target": "bio:messenger-rna"
+    }
+  ],
+  "status": "source_checked"
+}

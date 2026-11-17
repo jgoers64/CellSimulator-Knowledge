@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "bio:polypeptide",
+  "name": "Polypeptide",
+  "aliases": [
+    "polypeptides"
+  ],
+  "definitions": {
+    "simple": "A chain of amino acids joined by peptide bonds. One or more polypeptides can make up a protein.",
+    "scientific": "A polypeptide is a polymer of amino-acid residues joined by peptide (amide) bonds, with a directional amino terminus and carboxyl terminus."
+  },
+  "sources": [
+    "ref:openstax-proteins"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:amino-acid"
+    },
+    {
+      "type": "related",
+      "target": "bio:peptide-bond"
+    },
+    {
+      "type": "related",
+      "target": "bio:protein"
+    }
+  ],
+  "status": "source_checked"
+}

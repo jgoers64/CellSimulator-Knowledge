@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "chem:deoxyribose",
+  "name": "Deoxyribose",
+  "aliases": [
+    "2-deoxyribose",
+    "2′-deoxyribose"
+  ],
+  "definitions": {
+    "simple": "The five-carbon sugar in DNA nucleotides. Compared with ribose, it lacks an oxygen at the 2′ carbon.",
+    "scientific": "2-Deoxyribose is a pentose sugar whose 2′ carbon lacks the hydroxyl group present in ribose. It is the sugar of DNA deoxyribonucleotides."
+  },
+  "sources": [
+    "ref:openstax-nucleic",
+    "ref:openstax-dna"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:deoxyribonucleotide"
+    },
+    {
+      "type": "related",
+      "target": "bio:dna"
+    }
+  ],
+  "status": "source_checked"
+}

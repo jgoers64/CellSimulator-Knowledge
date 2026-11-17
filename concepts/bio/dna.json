@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "bio:dna",
+  "name": "DNA",
+  "aliases": [
+    "deoxyribonucleic acid"
+  ],
+  "definitions": {
+    "simple": "A molecule that stores hereditary information using an ordered sequence of nucleotide bases.",
+    "scientific": "Deoxyribonucleic acid is a nucleic-acid polymer composed of deoxyribonucleotide residues linked by phosphodiester bonds, most often arranged as two antiparallel complementary strands."
+  },
+  "sources": [
+    "ref:ncbi-composition",
+    "ref:openstax-dna"
+  ],
+  "relations": [
+    {
+      "type": "has_part",
+      "target": "bio:deoxyribonucleotide"
+    }
+  ],
+  "status": "source_checked"
+}

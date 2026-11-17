@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "bio:rna",
+  "name": "RNA",
+  "aliases": [
+    "ribonucleic acid"
+  ],
+  "definitions": {
+    "simple": "A nucleic acid built from ribonucleotides. RNA has roles in gene expression, protein production, and some biological reactions.",
+    "scientific": "Ribonucleic acid (RNA) is a polymer of ribonucleotides linked by phosphodiester bonds; its usual bases are adenine, cytosine, guanine and uracil."
+  },
+  "sources": [
+    "ref:openstax-nucleic"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:nucleotide"
+    },
+    {
+      "type": "related",
+      "target": "bio:messenger-rna"
+    },
+    {
+      "type": "related",
+      "target": "bio:transfer-rna"
+    }
+  ],
+  "status": "source_checked"
+}

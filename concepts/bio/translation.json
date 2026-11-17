@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "bio:translation",
+  "name": "Translation",
+  "aliases": [
+    "protein synthesis"
+  ],
+  "definitions": {
+    "simple": "The process in which a ribosome reads messenger RNA and makes a polypeptide.",
+    "scientific": "Translation is ribosome-mediated decoding of mRNA codons using aminoacyl-tRNAs to synthesize a polypeptide in the prescribed sequence."
+  },
+  "sources": [
+    "ref:openstax-translation"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:ribosome"
+    },
+    {
+      "type": "related",
+      "target": "bio:messenger-rna"
+    },
+    {
+      "type": "related",
+      "target": "bio:transfer-rna"
+    }
+  ],
+  "status": "source_checked"
+}

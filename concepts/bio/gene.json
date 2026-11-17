@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "bio:gene",
+  "name": "Gene",
+  "aliases": [
+    "genes"
+  ],
+  "definitions": {
+    "simple": "A region of DNA that contributes to a functional product, such as an RNA molecule or a protein.",
+    "scientific": "A gene is a genomic sequence whose expression produces a functional RNA product or an RNA that can be translated into a polypeptide; associated regulatory sequences control expression."
+  },
+  "sources": [
+    "ref:openstax-genes",
+    "ref:openstax-nucleic"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:dna"
+    },
+    {
+      "type": "related",
+      "target": "bio:transcription"
+    }
+  ],
+  "status": "source_checked"
+}

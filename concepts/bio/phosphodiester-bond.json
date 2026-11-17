@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "bio:phosphodiester-bond",
+  "name": "Phosphodiester bond",
+  "aliases": [
+    "phosphodiester linkage"
+  ],
+  "definitions": {
+    "simple": "A covalent connection that joins neighboring nucleotide sugars through a phosphate group, helping form the backbone of DNA and RNA.",
+    "scientific": "A phosphodiester linkage joins the 3′ oxygen of one nucleotide sugar to the 5′ oxygen of the adjacent nucleotide sugar via a phosphate, establishing the directionality of nucleic-acid strands."
+  },
+  "sources": [
+    "ref:openstax-nucleic"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:nucleotide"
+    },
+    {
+      "type": "related",
+      "target": "bio:dna"
+    },
+    {
+      "type": "related",
+      "target": "bio:rna"
+    }
+  ],
+  "status": "source_checked"
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "chem:hydrogen-bond",
+  "name": "Hydrogen bond",
+  "aliases": [
+    "hydrogen bonds",
+    "hydrogen bonding"
+  ],
+  "definitions": {
+    "simple": "An attraction involving a hydrogen atom bonded to an electronegative atom and another nearby electronegative atom. Hydrogen bonds help hold DNA base pairs together.",
+    "scientific": "A hydrogen bond is an attractive interaction involving a hydrogen atom covalently bound to a donor atom and an acceptor atom or group; it is important in nucleic-acid pairing and protein structure."
+  },
+  "sources": [
+    "ref:openstax-bonds",
+    "ref:openstax-nucleic"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:base-pair"
+    },
+    {
+      "type": "related",
+      "target": "chem:covalent-bond"
+    }
+  ],
+  "status": "source_checked"
+}

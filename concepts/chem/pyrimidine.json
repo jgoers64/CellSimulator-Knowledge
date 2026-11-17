@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "chem:pyrimidine",
+  "name": "Pyrimidine",
+  "aliases": [
+    "1,3-diazine"
+  ],
+  "definitions": {
+    "simple": "A six-membered ring compound containing carbon and two nitrogen atoms. Cytosine and thymine are examples of pyrimidine-based DNA bases.",
+    "scientific": "Pyrimidine (1,3-diazine) is a six-membered aromatic heterocycle containing nitrogen atoms at ring positions 1 and 3. Substituted pyrimidines include the nucleobases cytosine and thymine."
+  },
+  "sources": [
+    "ref:iupac-pyrimidine",
+    "ref:openstax-dna"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:cytosine"
+    },
+    {
+      "type": "related",
+      "target": "bio:thymine"
+    }
+  ],
+  "status": "source_checked"
+}

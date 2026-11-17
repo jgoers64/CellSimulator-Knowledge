@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "chem:purine",
+  "name": "Purine",
+  "aliases": [
+    "purines"
+  ],
+  "definitions": {
+    "simple": "A two-ring nitrogen-containing compound. Adenine and guanine are the purine bases used in DNA and RNA.",
+    "scientific": "Purine is a fused bicyclic aromatic nitrogen heterocycle, comprising pyrimidine and imidazole rings; adenine and guanine are purine-derived nucleobases."
+  },
+  "sources": [
+    "ref:openstax-nucleic",
+    "ref:openstax-dna"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:adenine"
+    },
+    {
+      "type": "related",
+      "target": "bio:base-pair"
+    }
+  ],
+  "status": "source_checked"
+}

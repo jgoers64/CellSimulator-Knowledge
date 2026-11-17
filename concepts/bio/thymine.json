@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "bio:thymine",
+  "name": "Thymine",
+  "aliases": [
+    "T base"
+  ],
+  "definitions": {
+    "simple": "One of the four standard DNA bases. Thymine is a pyrimidine and usually pairs with adenine in double-stranded DNA.",
+    "scientific": "Thymine (5-methyluracil) is a pyrimidine nucleobase characteristic of canonical DNA; its Watson–Crick complement is adenine."
+  },
+  "sources": [
+    "ref:openstax-dna",
+    "ref:ncbi-dna"
+  ],
+  "relations": [
+    {
+      "type": "example_of",
+      "target": "chem:pyrimidine"
+    }
+  ],
+  "status": "source_checked"
+}

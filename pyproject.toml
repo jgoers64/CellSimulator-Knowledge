@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cellsimulator-knowledge"
+version = "0.1.0"
+description = "Versioned scientific knowledge database for CellSimulator"
+requires-python = ">=3.12"
+
+[tool.setuptools]
+packages = ["knowledge", "knowledge.tests"]
+
+[tool.setuptools.package-dir]
+knowledge = "."

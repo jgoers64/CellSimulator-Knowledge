@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "bio:transfer-rna",
+  "name": "Transfer RNA",
+  "aliases": [
+    "tRNA",
+    "transfer ribonucleic acid"
+  ],
+  "definitions": {
+    "simple": "An RNA molecule that brings a particular amino acid to a ribosome and recognizes a codon in messenger RNA.",
+    "scientific": "Transfer RNA (tRNA) is an adaptor RNA with an anticodon region and an amino-acid attachment site; aminoacyl-tRNAs match mRNA codons during translation."
+  },
+  "sources": [
+    "ref:openstax-translation",
+    "ref:openstax-nucleic"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:rna"
+    },
+    {
+      "type": "related",
+      "target": "bio:amino-acid"
+    },
+    {
+      "type": "related",
+      "target": "bio:codon"
+    }
+  ],
+  "status": "source_checked"
+}

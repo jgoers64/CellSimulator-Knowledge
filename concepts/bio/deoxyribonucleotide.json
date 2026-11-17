@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "bio:deoxyribonucleotide",
+  "name": "Deoxyribonucleotide",
+  "aliases": [
+    "DNA nucleotide"
+  ],
+  "definitions": {
+    "simple": "A nucleotide that contains deoxyribose sugar. These are the building blocks used to make DNA.",
+    "scientific": "A deoxyribonucleotide contains a nitrogenous base linked to 2′-deoxyribose and one or more phosphate groups; its monophosphate residue forms a repeating unit of DNA."
+  },
+  "sources": [
+    "ref:ncbi-dna",
+    "ref:ncbi-composition"
+  ],
+  "relations": [
+    {
+      "type": "broader",
+      "target": "bio:nucleotide"
+    },
+    {
+      "type": "part_of",
+      "target": "bio:dna"
+    }
+  ],
+  "status": "source_checked"
+}

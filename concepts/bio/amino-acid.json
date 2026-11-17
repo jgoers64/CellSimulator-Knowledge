@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "bio:amino-acid",
+  "name": "Amino acid",
+  "aliases": [
+    "amino acids"
+  ],
+  "definitions": {
+    "simple": "A small molecule that can serve as a building block of proteins. Protein-making amino acids share amino and carboxyl groups but differ in their side chains.",
+    "scientific": "An amino acid is an organic compound bearing amino and carboxyl functional groups. The alpha-amino acids incorporated into proteins are linked through peptide bonds."
+  },
+  "sources": [
+    "ref:openstax-proteins"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:protein"
+    },
+    {
+      "type": "related",
+      "target": "bio:peptide-bond"
+    }
+  ],
+  "status": "source_checked"
+}

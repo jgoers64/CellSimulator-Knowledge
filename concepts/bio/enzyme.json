@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "bio:enzyme",
+  "name": "Enzyme",
+  "aliases": [
+    "enzymes"
+  ],
+  "definitions": {
+    "simple": "A biological catalyst that speeds up a chemical reaction without being consumed by that reaction. Most enzymes are proteins.",
+    "scientific": "An enzyme is a biological catalyst, typically a protein and sometimes a catalytic RNA, that increases reaction rate by lowering the activation-energy barrier without changing overall reaction equilibrium."
+  },
+  "sources": [
+    "ref:openstax-proteins"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:protein"
+    }
+  ],
+  "status": "source_checked"
+}

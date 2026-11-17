@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "bio:base-pair",
+  "name": "Base pair",
+  "aliases": [
+    "base pairs",
+    "base pairing"
+  ],
+  "definitions": {
+    "simple": "Two complementary nitrogenous bases held together through hydrogen bonding, such as A with T and C with G in standard DNA.",
+    "scientific": "A base pair is an association between complementary nucleobases in nucleic acids, typically stabilized by hydrogen bonds; Watson–Crick DNA pairs are A–T and G–C."
+  },
+  "sources": [
+    "ref:openstax-nucleic",
+    "ref:openstax-dna"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:dna"
+    },
+    {
+      "type": "related",
+      "target": "chem:hydrogen-bond"
+    },
+    {
+      "type": "related",
+      "target": "chem:purine"
+    }
+  ],
+  "status": "source_checked"
+}
