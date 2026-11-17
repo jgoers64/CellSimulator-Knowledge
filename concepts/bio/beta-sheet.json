@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "bio:beta-sheet",
+  "name": "Beta sheet",
+  "aliases": [
+    "β-sheet",
+    "beta sheets",
+    "beta-pleated sheet"
+  ],
+  "definitions": {
+    "simple": "A sheet-like section of a protein formed when stretched parts of a chain line up and hydrogen-bond to one another.",
+    "scientific": "A beta sheet is a protein secondary-structure arrangement of extended beta strands linked by interstrand backbone hydrogen bonds; neighboring strands can run parallel or antiparallel."
+  },
+  "sources": [
+    "ref:openstax-proteins"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:protein"
+    },
+    {
+      "type": "related",
+      "target": "chem:hydrogen-bond"
+    }
+  ],
+  "status": "source_checked"
+}
