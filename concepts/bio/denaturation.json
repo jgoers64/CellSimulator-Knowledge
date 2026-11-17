@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "bio:denaturation",
+  "name": "Protein denaturation",
+  "aliases": [
+    "denaturation",
+    "denatured protein"
+  ],
+  "definitions": {
+    "simple": "A change that disrupts a protein's usual folded shape, often making it work poorly or stop working.",
+    "scientific": "Protein denaturation is disruption of the native higher-order conformation of a protein by conditions such as heat, extreme pH, or chemical agents, commonly reducing biological activity without necessarily breaking its peptide backbone."
+  },
+  "sources": [
+    "ref:openstax-proteins"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:protein"
+    }
+  ],
+  "status": "source_checked"
+}
