@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "bio:disulfide-bond",
+  "name": "Disulfide bond",
+  "aliases": [
+    "disulfide bridge",
+    "disulfide bonds"
+  ],
+  "definitions": {
+    "simple": "A covalent link between two cysteine side chains that can help stabilize a protein's shape.",
+    "scientific": "A disulfide bond is a covalent sulfur–sulfur linkage formed by oxidation of two cysteine thiol groups. It can connect parts of one polypeptide or join separate polypeptide chains."
+  },
+  "sources": [
+    "ref:openstax-proteins"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:protein"
+    },
+    {
+      "type": "related",
+      "target": "chem:covalent-bond"
+    }
+  ],
+  "status": "source_checked"
+}
