@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "bio:secondary-structure",
+  "name": "Secondary structure",
+  "aliases": [
+    "secondary protein structure"
+  ],
+  "definitions": {
+    "simple": "Short, repeating shapes within a protein chain, such as spirals and sheets, held mainly by hydrogen bonds in the backbone.",
+    "scientific": "Protein secondary structure describes local regular patterns of polypeptide-backbone conformation, notably alpha helices and beta sheets. Backbone hydrogen bonding stabilizes these patterns."
+  },
+  "sources": [
+    "ref:openstax-proteins"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:protein"
+    },
+    {
+      "type": "related",
+      "target": "chem:hydrogen-bond"
+    }
+  ],
+  "status": "source_checked"
+}
