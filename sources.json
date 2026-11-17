@@ -50,6 +50,71 @@
       "id": "ref:openstax-genes",
       "label": "OpenStax Biology 2e — 15 Chapter Summary",
       "url": "https://openstax.org/books/biology-2e/pages/15-chapter-summary"
+    },
+    {
+      "id": "ref:openstax-carb",
+      "label": "OpenStax Biology 2e — 3.2 Carbohydrates",
+      "url": "https://openstax.org/books/biology-2e/pages/3-2-carbohydrates"
+    },
+    {
+      "id": "ref:openstax-lipids",
+      "label": "OpenStax Biology 2e — 3.3 Lipids",
+      "url": "https://openstax.org/books/biology-2e/pages/3-3-lipids"
+    },
+    {
+      "id": "ref:openstax-membrane",
+      "label": "OpenStax Biology 2e — 5.1 Components and Structure",
+      "url": "https://openstax.org/books/biology-2e/pages/5-1-components-and-structure"
+    },
+    {
+      "id": "ref:openstax-enzymes",
+      "label": "OpenStax Biology 2e — 6.5 Enzymes",
+      "url": "https://openstax.org/books/biology-2e/pages/6-5-enzymes"
+    },
+    {
+      "id": "ref:openstax-atp",
+      "label": "OpenStax Biology 2e — 6.4 ATP",
+      "url": "https://openstax.org/books/biology-2e/pages/6-4-atp-adenosine-triphosphate"
+    },
+    {
+      "id": "ref:openstax-glycolysis",
+      "label": "OpenStax Biology 2e — 7.2 Glycolysis",
+      "url": "https://openstax.org/books/biology-2e/pages/7-2-glycolysis"
+    },
+    {
+      "id": "ref:openstax-tca",
+      "label": "OpenStax Biology 2e — 7.3 Pyruvate oxidation and citric acid cycle",
+      "url": "https://openstax.org/books/biology-2e/pages/7-3-oxidation-of-pyruvate-and-the-citric-acid-cycle"
+    },
+    {
+      "id": "ref:openstax-oxphos",
+      "label": "OpenStax Biology 2e — 7.4 Oxidative Phosphorylation",
+      "url": "https://openstax.org/books/biology-2e/pages/7-4-oxidative-phosphorylation"
+    },
+    {
+      "id": "ref:openstax-receptors",
+      "label": "OpenStax Biology 2e — 9.1 Signaling Molecules and Cellular Receptors",
+      "url": "https://openstax.org/books/biology-2e/pages/9-1-signaling-molecules-and-cellular-receptors"
+    },
+    {
+      "id": "ref:openstax-transduction",
+      "label": "OpenStax Biology 2e — 9.2 Propagation of the Signal",
+      "url": "https://openstax.org/books/biology-2e/pages/9-2-propagation-of-the-signal"
+    },
+    {
+      "id": "ref:openstax-replication",
+      "label": "OpenStax Biology 2e — 14.4 DNA Replication in Prokaryotes",
+      "url": "https://openstax.org/books/biology-2e/pages/14-4-dna-replication-in-prokaryotes"
+    },
+    {
+      "id": "ref:openstax-transcription",
+      "label": "OpenStax Biology 2e — 15.3 Eukaryotic Transcription",
+      "url": "https://openstax.org/books/biology-2e/pages/15-3-eukaryotic-transcription"
+    },
+    {
+      "id": "ref:ncbi-eicosanoids",
+      "label": "NCBI Bookshelf — Signaling Molecules and Their Receptors: Eicosanoids",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK9924/"
     }
   ]
 }
