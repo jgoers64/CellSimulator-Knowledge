@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "bio:tertiary-structure",
+  "name": "Tertiary structure",
+  "aliases": [
+    "tertiary protein structure"
+  ],
+  "definitions": {
+    "simple": "The overall three-dimensional arrangement of a single protein chain after it folds.",
+    "scientific": "Tertiary structure is the three-dimensional organization of one polypeptide chain, established by interactions among side chains and the backbone, including hydrophobic interactions, hydrogen bonds, ionic interactions, and sometimes disulfide crosslinks."
+  },
+  "sources": [
+    "ref:openstax-proteins"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:protein"
+    },
+    {
+      "type": "related",
+      "target": "bio:polypeptide"
+    }
+  ],
+  "status": "source_checked"
+}
