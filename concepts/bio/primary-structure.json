@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "bio:primary-structure",
+  "name": "Primary structure",
+  "aliases": [
+    "primary protein structure",
+    "amino acid sequence"
+  ],
+  "definitions": {
+    "simple": "The order of amino acids in a protein chain, from its beginning to its end.",
+    "scientific": "The primary structure of a polypeptide is its linear amino-acid sequence, conventionally written from the amino (N) terminus to the carboxyl (C) terminus. This sequence constrains the higher levels of protein structure."
+  },
+  "sources": [
+    "ref:openstax-proteins"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:protein"
+    },
+    {
+      "type": "related",
+      "target": "bio:amino-acid"
+    }
+  ],
+  "status": "source_checked"
+}
