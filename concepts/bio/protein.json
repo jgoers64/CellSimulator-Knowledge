@@ -28,6 +28,18 @@
     {
       "type": "related",
       "target": "bio:enzyme"
+    },
+    {
+      "type": "related",
+      "target": "bio:protein-folding"
+    },
+    {
+      "type": "related",
+      "target": "bio:protein-domain"
+    },
+    {
+      "type": "related",
+      "target": "bio:protein-subunit"
     }
   ],
   "status": "source_checked",
@@ -35,7 +47,7 @@
     {
       "heading": "From Amino Acids to a Protein",
       "paragraphs": [
-        "Proteins are made from amino acids. Each amino acid has a shared backbone and a variable side chain, often called an R group. There are 20 standard proteinogenic amino acids in the genetic code, and their different chemical properties help explain why one protein behaves differently from another.",
+        "Proteins are made from amino acids. Each amino acid has a shared backbone and a variable side chain, often called an R group. Most proteins are built primarily from 20 standard amino acids, with specialized exceptions such as selenocysteine. Their different chemical properties help explain why one protein behaves differently from another.",
         "During translation, a ribosome reads messenger RNA while transfer RNAs deliver the amino acids specified by its codons. The ribosome joins them through peptide bonds, producing a polypeptide with a particular sequence. This chain has an amino (N) terminus and a carboxyl (C) terminus. A protein may consist of one polypeptide or several associated chains.",
         "In the diagram, each colored circle stands for an entire amino acid residue, and each connecting line represents a peptide linkage. The R labels represent the side chains. The drawing deliberately does not show individual atoms."
       ],
@@ -72,7 +84,7 @@
     {
       "heading": "Folding, Motion, and Chaperones",
       "paragraphs": [
-        "A newly made polypeptide can sample different conformations. Some proteins fold as they emerge from the ribosome, and many continue to move among related conformations when functioning. A structural model shows one arrangement or a limited set of arrangements, not every motion the protein can make.",
+        "Protein folding is the process by which a polypeptide samples conformations and can adopt structures favorable under its conditions. Some proteins fold as they emerge from the ribosome, and many continue to move among related conformations when functioning. A structural model shows one arrangement or a limited set of arrangements, not every motion the protein can make.",
         "Molecular chaperones help some proteins fold, assemble, or recover from harmful interactions. For example, Hsp70 proteins can protect exposed regions of a nascent chain, while chaperonin systems can provide a more protected environment for folding. Chaperones do not provide the final amino acid sequence; they assist the physical process of reaching workable conformations.",
         "A protein that adopts an unsuitable conformation may lose function or aggregate. However, flexibility and changes in conformation are also normal features of many healthy proteins. It would be misleading to call every change in shape misfolding."
       ],
@@ -96,7 +108,7 @@
     {
       "heading": "Reading a Protein in CellSimulator",
       "paragraphs": [
-        "A structural file provides atomic coordinates for the parts represented in that file. An experimental structure may contain only one domain, one conformation, or a piece of a larger complex. A predicted model has a different evidence basis from a measured structure. Always check which chains, residues, and cofactors are actually present before assuming that the viewer shows the complete protein.",
+        "A structural file provides atomic coordinates for the parts represented in that file. An experimental structure may contain only one protein domain, one conformation, or a piece of a larger complex. A predicted model has a different evidence basis from a measured structure. Always check which chains, residues, and cofactors are actually present before assuming that the viewer shows the complete protein.",
         "Displaying coordinates is not the same as simulating folding or molecular motion accurately. To make a physical simulation, the system needs appropriate force-field parameters, solvent or membrane context, boundary conditions, and sufficient computation. Even a well-prepared classical molecular-dynamics trajectory is a model with limitations, not an exact reconstruction of every electronic process."
       ],
       "sources": [
