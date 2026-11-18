@@ -153,6 +153,57 @@ class KnowledgeTests(unittest.TestCase):
             with self.assertRaisesRegex(KnowledgeError, "illustration ID"):
                 read_concepts(root)
 
+    def test_full_user_authored_protein_chapter_roundtrips_without_edits(self):
+        source_file = ROOT / "articles" / "protein.md"
+        markdown = source_file.read_text(encoding="utf-8")
+        self.assertIn("# 1. Introduction to Proteins", markdown)
+        self.assertIn("# 10. Protein Research", markdown)
+        self.assertIn("# Conclusion", markdown)
+        self.assertEqual(markdown.count("**[Future visual "), 10)
+        self.assertEqual(len([
+            line for line in markdown.splitlines()
+            if line.startswith("## ")
+        ]), 50)
+        with tempfile.TemporaryDirectory() as tmp:
+            database = build_database(ROOT, Path(tmp) / "full-article.sqlite3")
+            concept = KnowledgeStore(database).get("bio:protein")
+            self.assertEqual(concept["article_markdown"], markdown)
+            self.assertEqual(concept["definition"], next(
+                raw["definitions"]["simple"] for raw in read_concepts(ROOT)
+                if raw["id"] == "bio:protein"
+            ))
+
+    def test_index_version_two_still_reads_older_short_protein_articles(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            database = build_database(ROOT, Path(tmp) / "version-two.sqlite3")
+            with closing(sqlite3.connect(database)) as connection, connection:
+                connection.execute("DROP TABLE longform_articles")
+                connection.execute("PRAGMA user_version = 2")
+            concept = KnowledgeStore(database).get("bio:protein")
+            self.assertTrue(concept["definition"])
+            self.assertGreaterEqual(len(concept["article"]), 3)
+            self.assertEqual(concept["article_markdown"], "")
+
+    def test_reject_article_source_path_outside_repository(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "concepts").mkdir()
+            (root / "sources.json").write_text(
+                (ROOT / "sources.json").read_text(encoding="utf-8"),
+                encoding="utf-8",
+            )
+            protein = next(
+                raw for raw in read_concepts(ROOT) if raw["id"] == "bio:protein"
+            )
+            protein = json.loads(json.dumps(protein))
+            protein["relations"] = []
+            protein["article_file"] = "../private.md"
+            (root / "concepts" / "protein.json").write_text(
+                json.dumps(protein), encoding="utf-8",
+            )
+            with self.assertRaisesRegex(KnowledgeError, "invalid article_file"):
+                read_concepts(root)
+
     def test_old_compiled_knowledge_index_still_supports_short_definitions(self):
         with tempfile.TemporaryDirectory() as tmp:
             db_path = build_database(ROOT, Path(tmp) / "old.sqlite3")
