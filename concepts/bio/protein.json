@@ -11,7 +11,10 @@
   },
   "sources": [
     "ref:openstax-proteins",
-    "ref:openstax-translation"
+    "ref:openstax-translation",
+    "ref:ncbi-protein-structure",
+    "ref:ncbi-protein-folding",
+    "ref:openstax-enzymes"
   ],
   "relations": [
     {
@@ -32,31 +35,72 @@
     {
       "heading": "From Amino Acids to a Protein",
       "paragraphs": [
-        "A protein begins as an amino-acid sequence. During translation, a ribosome reads the information carried by messenger RNA, and transfer RNAs bring amino acids that are joined into a growing polypeptide chain. A peptide bond links the carboxyl group of one amino acid to the amino group of the next, forming a backbone shared by all ordinary polypeptides.",
-        "The sequence matters because amino acids have different side chains. Some carry electrical charge, some are polar, and others interact poorly with water. Their order influences how the chain folds, where it can bind other molecules, and what chemical reactions it can perform. A protein may contain one polypeptide chain or several cooperating chains."
+        "Proteins are made from amino acids. Each amino acid has a shared backbone and a variable side chain, often called an R group. There are 20 standard proteinogenic amino acids in the genetic code, and their different chemical properties help explain why one protein behaves differently from another.",
+        "During translation, a ribosome reads messenger RNA while transfer RNAs deliver the amino acids specified by its codons. The ribosome joins them through peptide bonds, producing a polypeptide with a particular sequence. This chain has an amino (N) terminus and a carboxyl (C) terminus. A protein may consist of one polypeptide or several associated chains.",
+        "In the diagram, each colored circle stands for an entire amino acid residue, and each connecting line represents a peptide linkage. The R labels represent the side chains. The drawing deliberately does not show individual atoms."
       ],
+      "illustration": "protein-peptide-chain",
       "sources": [
         "ref:openstax-proteins",
         "ref:openstax-translation"
       ]
     },
     {
-      "heading": "How Structure Shapes Function",
+      "heading": "Why the Amino Acid Sequence Matters",
       "paragraphs": [
-        "The backbone can form recurring local patterns, including alpha helices and beta sheets. These are examples of secondary structure. Interactions among side chains and with the surrounding solution help establish the overall three-dimensional arrangement, called tertiary structure. When several chains assemble, their organization is described as quaternary structure.",
-        "Protein shape is not simply decorative. A binding pocket must position its atoms appropriately to recognize a partner, and an enzyme's active site must bring reacting groups into a favorable arrangement. Proteins can also move between conformations, so a single static structure does not capture every state that a real protein visits."
+        "A protein's primary structure is its amino acid sequence. Because the side chains differ in charge, polarity, size, and ability to interact with water, changing the sequence can change which conformations the chain favors. Some residues can form strong electrostatic interactions, while others pack into hydrophobic regions or form covalent disulfide links.",
+        "The chain also contains peptide-backbone groups that can form hydrogen bonds. Interactions among the backbone, side chains, solvent, ions, and other molecules work together to shape the protein. These physical interactions are not separate, independently operating 'folding instructions'; they are parts of the same molecular system."
       ],
       "sources": [
-        "ref:openstax-proteins"
+        "ref:openstax-proteins",
+        "ref:ncbi-protein-structure"
+      ]
+    },
+    {
+      "heading": "Four Levels of Protein Structure",
+      "paragraphs": [
+        "Primary structure means the sequence of amino acids. Secondary structure describes local arrangements of the backbone, especially alpha helices and beta sheets. These recurring patterns are stabilized largely by backbone hydrogen bonds.",
+        "Tertiary structure describes how the parts of a single polypeptide chain are arranged in three dimensions. Quaternary structure describes how multiple polypeptide chains are assembled relative to one another. Not every protein has quaternary structure, and many proteins also contain flexible or intrinsically disordered regions rather than one completely rigid shape.",
+        "The illustration shows the four commonly taught structural levels as a simplified visual guide, not a required series of four consecutive folding steps."
+      ],
+      "illustration": "protein-structure-levels",
+      "sources": [
+        "ref:openstax-proteins",
+        "ref:ncbi-protein-structure"
+      ]
+    },
+    {
+      "heading": "Folding, Motion, and Chaperones",
+      "paragraphs": [
+        "A newly made polypeptide can sample different conformations. Some proteins fold as they emerge from the ribosome, and many continue to move among related conformations when functioning. A structural model shows one arrangement or a limited set of arrangements, not every motion the protein can make.",
+        "Molecular chaperones help some proteins fold, assemble, or recover from harmful interactions. For example, Hsp70 proteins can protect exposed regions of a nascent chain, while chaperonin systems can provide a more protected environment for folding. Chaperones do not provide the final amino acid sequence; they assist the physical process of reaching workable conformations.",
+        "A protein that adopts an unsuitable conformation may lose function or aggregate. However, flexibility and changes in conformation are also normal features of many healthy proteins. It would be misleading to call every change in shape misfolding."
+      ],
+      "sources": [
+        "ref:ncbi-protein-folding",
+        "ref:ncbi-protein-structure"
       ]
     },
     {
       "heading": "What Proteins Do in Cells",
       "paragraphs": [
-        "Enzymes accelerate cellular reactions; membrane proteins help move substances or transmit signals; structural proteins provide mechanical support; and motor proteins convert chemical energy into movement. Other proteins transport cargo, regulate gene activity, or help defend against pathogens. These roles depend on the particular protein rather than on the fact that it is made of amino acids.",
-        "When examining a protein in CellSimulator, distinguish a protein identity from the particular structure displayed. An experimental deposit may capture only one domain, one conformation, or part of a larger complex. A predicted model also requires careful interpretation. The viewer shows structural information, not direct experimental observation of a protein performing its function."
+        "Enzymes accelerate chemical reactions by arranging reacting groups in an active site. Structural proteins help give cells and tissues strength. Transport proteins carry substances, membrane proteins participate in movement and signaling, and motor proteins convert chemical energy into motion.",
+        "Proteins also control gene expression, receive signals, participate in immune defense, and build large molecular machines. A ribosome itself contains many proteins together with ribosomal RNA. Mitochondrial ATP synthase is another multi-subunit machine; looking at one of its alpha or beta subunits does not show the complete assembled enzyme."
       ],
       "sources": [
+        "ref:openstax-proteins",
+        "ref:openstax-enzymes",
+        "ref:openstax-translation"
+      ]
+    },
+    {
+      "heading": "Reading a Protein in CellSimulator",
+      "paragraphs": [
+        "A structural file provides atomic coordinates for the parts represented in that file. An experimental structure may contain only one domain, one conformation, or a piece of a larger complex. A predicted model has a different evidence basis from a measured structure. Always check which chains, residues, and cofactors are actually present before assuming that the viewer shows the complete protein.",
+        "Displaying coordinates is not the same as simulating folding or molecular motion accurately. To make a physical simulation, the system needs appropriate force-field parameters, solvent or membrane context, boundary conditions, and sufficient computation. Even a well-prepared classical molecular-dynamics trajectory is a model with limitations, not an exact reconstruction of every electronic process."
+      ],
+      "sources": [
+        "ref:ncbi-protein-structure",
         "ref:openstax-proteins"
       ]
     }
