@@ -10,7 +10,8 @@
     "scientific": "A protein is a biological macromolecule comprising one or more polypeptide chains that adopt a functional conformation, often in association with additional cofactors."
   },
   "sources": [
-    "ref:openstax-proteins"
+    "ref:openstax-proteins",
+    "ref:openstax-translation"
   ],
   "relations": [
     {
@@ -26,5 +27,38 @@
       "target": "bio:enzyme"
     }
   ],
-  "status": "source_checked"
+  "status": "source_checked",
+  "article": [
+    {
+      "heading": "From Amino Acids to a Protein",
+      "paragraphs": [
+        "A protein begins as an amino-acid sequence. During translation, a ribosome reads the information carried by messenger RNA, and transfer RNAs bring amino acids that are joined into a growing polypeptide chain. A peptide bond links the carboxyl group of one amino acid to the amino group of the next, forming a backbone shared by all ordinary polypeptides.",
+        "The sequence matters because amino acids have different side chains. Some carry electrical charge, some are polar, and others interact poorly with water. Their order influences how the chain folds, where it can bind other molecules, and what chemical reactions it can perform. A protein may contain one polypeptide chain or several cooperating chains."
+      ],
+      "sources": [
+        "ref:openstax-proteins",
+        "ref:openstax-translation"
+      ]
+    },
+    {
+      "heading": "How Structure Shapes Function",
+      "paragraphs": [
+        "The backbone can form recurring local patterns, including alpha helices and beta sheets. These are examples of secondary structure. Interactions among side chains and with the surrounding solution help establish the overall three-dimensional arrangement, called tertiary structure. When several chains assemble, their organization is described as quaternary structure.",
+        "Protein shape is not simply decorative. A binding pocket must position its atoms appropriately to recognize a partner, and an enzyme's active site must bring reacting groups into a favorable arrangement. Proteins can also move between conformations, so a single static structure does not capture every state that a real protein visits."
+      ],
+      "sources": [
+        "ref:openstax-proteins"
+      ]
+    },
+    {
+      "heading": "What Proteins Do in Cells",
+      "paragraphs": [
+        "Enzymes accelerate cellular reactions; membrane proteins help move substances or transmit signals; structural proteins provide mechanical support; and motor proteins convert chemical energy into movement. Other proteins transport cargo, regulate gene activity, or help defend against pathogens. These roles depend on the particular protein rather than on the fact that it is made of amino acids.",
+        "When examining a protein in CellSimulator, distinguish a protein identity from the particular structure displayed. An experimental deposit may capture only one domain, one conformation, or part of a larger complex. A predicted model also requires careful interpretation. The viewer shows structural information, not direct experimental observation of a protein performing its function."
+      ],
+      "sources": [
+        "ref:openstax-proteins"
+      ]
+    }
+  ]
 }
