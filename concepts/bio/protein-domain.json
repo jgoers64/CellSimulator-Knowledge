@@ -13,5 +13,27 @@
     "ref:openstax-proteins"
   ],
   "relations": [],
-  "status": "source_checked"
+  "status": "source_checked",
+  "article": [
+    {
+      "heading": "A Functional Region Inside a Larger Chain",
+      "paragraphs": [
+        "Many proteins contain recognizable regions called domains. A domain often forms a relatively compact unit within a polypeptide and may have its own binding or catalytic role. Some domains fold to a useful structure when isolated, while others depend more strongly on neighboring regions.",
+        "A protein can combine several domains in one chain. This allows one part to recognize a signal or partner while another part performs chemistry or interacts with a membrane. A domain is larger and more independently organized than a short recurring sequence or structural motif."
+      ],
+      "sources": [
+        "ref:openstax-proteins"
+      ]
+    },
+    {
+      "heading": "Why Structural Databases Contain Domains",
+      "paragraphs": [
+        "An experimental structure may cover only one domain of a full-length protein because the rest was too flexible, difficult to prepare, or not part of the experiment. A deposited domain is still useful scientific evidence about that region, but it is not equivalent to a measured structure of the entire protein.",
+        "When a CellSimulator structure has a domain in its title, treat its atomic coordinates as a view of that portion, not necessarily the complete native protein or its assembly with partners."
+      ],
+      "sources": [
+        "ref:openstax-proteins"
+      ]
+    }
+  ]
 }
