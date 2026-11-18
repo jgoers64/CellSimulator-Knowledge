@@ -10,7 +10,8 @@
     "scientific": "A protein domain is a compact structural or functional unit within a polypeptide, often capable of semi-independent folding and reused across unrelated protein architectures."
   },
   "sources": [
-    "ref:openstax-proteins"
+    "ref:openstax-proteins",
+    "ref:ncbi-protein-structure"
   ],
   "relations": [],
   "status": "source_checked",
@@ -22,7 +23,8 @@
         "A protein can combine several domains in one chain. This allows one part to recognize a signal or partner while another part performs chemistry or interacts with a membrane. A domain is larger and more independently organized than a short recurring sequence or structural motif."
       ],
       "sources": [
-        "ref:openstax-proteins"
+        "ref:openstax-proteins",
+        "ref:ncbi-protein-structure"
       ]
     },
     {
@@ -32,7 +34,8 @@
         "When a CellSimulator structure has a domain in its title, treat its atomic coordinates as a view of that portion, not necessarily the complete native protein or its assembly with partners."
       ],
       "sources": [
-        "ref:openstax-proteins"
+        "ref:openstax-proteins",
+        "ref:ncbi-protein-structure"
       ]
     }
   ]
