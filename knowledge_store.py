@@ -121,7 +121,7 @@ def read_concepts(root: Path = ROOT) -> list[dict]:
             # A concept may have one complete chapter-length source document.
             # Paths must stay inside this repository's articles directory.
             value = _nonempty(raw["article_file"], f"{key} article_file")
-            if (re.fullmatch(r"articles/[a-z0-9][a-z0-9_-]*\\.md", value) is None
+            if (re.fullmatch(r"articles/[a-z0-9][a-z0-9_-]*\.md", value) is None
                     or (root / value).is_symlink()):
                 raise KnowledgeError(f"{key}: invalid article_file path")
             source_text = (root / value).read_text(encoding="utf-8")
