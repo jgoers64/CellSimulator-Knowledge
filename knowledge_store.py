@@ -106,6 +106,13 @@ def read_concepts(root: Path = ROOT) -> list[dict]:
                 raise KnowledgeError(f"{key}: article paragraphs must be a nonempty list")
             for paragraph in paragraphs:
                 _nonempty(paragraph, f"{key} article paragraph")
+            if "illustration" in section:
+                # Only stable offline illustration IDs are allowed. External
+                # image URLs or filesystem paths never enter the data index.
+                illustration = section["illustration"]
+                if (not isinstance(illustration, str)
+                        or re.fullmatch(r"[a-z][a-z0-9-]{1,63}", illustration) is None):
+                    raise KnowledgeError(f"{key}: invalid article illustration ID")
             refs = section.get("sources", [])
             if not isinstance(refs, list) or not refs or any(ref not in cited for ref in refs):
                 raise KnowledgeError(f"{key}: article sections must cite concept sources")
