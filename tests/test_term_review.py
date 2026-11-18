@@ -79,6 +79,9 @@ class TermReviewTests(unittest.TestCase):
         with TemporaryDirectory() as temp:
             root = Path(temp) / "knowledge"
             shutil.copytree(ROOT / "concepts", root / "concepts")
+            # Concepts can now point to authored long-form Markdown. Copy
+            # those sources as well when constructing a complete test repo.
+            shutil.copytree(ROOT / "articles", root / "articles")
             shutil.copy2(ROOT / "sources.json", root / "sources.json")
             csv_file = Path(temp) / "review.csv"
             fieldnames = (
