@@ -27,6 +27,11 @@
       "url": "https://openstax.org/books/biology-2e/pages/3-4-proteins"
     },
     {
+      "id": "ref:ncbi-protein-structure",
+      "label": "NCBI Bookshelf — The Shape and Structure of Proteins",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26830/"
+    },
+    {
       "id": "ref:openstax-nucleic",
       "label": "OpenStax Biology 2e — 3.5 Nucleic Acids",
       "url": "https://openstax.org/books/biology-2e/pages/3-5-nucleic-acids"
