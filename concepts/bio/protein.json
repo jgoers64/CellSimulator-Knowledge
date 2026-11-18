@@ -116,5 +116,6 @@
         "ref:openstax-proteins"
       ]
     }
-  ]
+  ],
+  "article_file": "articles/protein.md"
 }
