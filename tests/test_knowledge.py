@@ -118,6 +118,41 @@ class KnowledgeTests(unittest.TestCase):
                         self.assertTrue(set(section["sources"]).issubset(
                             {source["id"] for source in short["sources"]}))
 
+    def test_protein_article_illustration_ids_roundtrip_through_index(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            db_path = build_database(ROOT, Path(tmp) / "illustrated.sqlite3")
+            article = KnowledgeStore(db_path).get("bio:protein")["article"]
+            illustrations = [
+                section["illustration"] for section in article
+                if "illustration" in section
+            ]
+            self.assertEqual(
+                illustrations,
+                ["protein-peptide-chain", "protein-structure-levels"],
+            )
+            self.assertTrue(all(
+                section["sources"] for section in article
+            ))
+
+    def test_invalid_external_image_reference_is_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "concepts").mkdir()
+            (root / "sources.json").write_text(
+                (ROOT / "sources.json").read_text(encoding="utf-8"),
+                encoding="utf-8",
+            )
+            raw = next(item for item in read_concepts(ROOT)
+                       if item["id"] == "bio:protein")
+            raw = json.loads(json.dumps(raw))
+            raw["relations"] = []
+            raw["article"][0]["illustration"] = "https://example.com/image.png"
+            (root / "concepts" / "protein.json").write_text(
+                json.dumps(raw), encoding="utf-8",
+            )
+            with self.assertRaisesRegex(KnowledgeError, "illustration ID"):
+                read_concepts(root)
+
     def test_old_compiled_knowledge_index_still_supports_short_definitions(self):
         with tempfile.TemporaryDirectory() as tmp:
             db_path = build_database(ROOT, Path(tmp) / "old.sqlite3")
