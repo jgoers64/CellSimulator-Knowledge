@@ -47,7 +47,7 @@
     {
       "heading": "From Amino Acids to a Protein",
       "paragraphs": [
-        "Proteins are made from amino acids. Each amino acid has a shared backbone and a variable side chain, often called an R group. Most proteins are built primarily from 20 standard amino acids, with specialized exceptions such as selenocysteine. Their different chemical properties help explain why one protein behaves differently from another.",
+        "Proteins are made from amino acids. Each amino acid has a shared backbone and a variable side chain, often called an R group. Most proteins are built using the 20 standard amino acids; their different chemical properties help explain why one protein behaves differently from another.",
         "During translation, a ribosome reads messenger RNA while transfer RNAs deliver the amino acids specified by its codons. The ribosome joins them through peptide bonds, producing a polypeptide with a particular sequence. This chain has an amino (N) terminus and a carboxyl (C) terminus. A protein may consist of one polypeptide or several associated chains.",
         "In the diagram, each colored circle stands for an entire amino acid residue, and each connecting line represents a peptide linkage. The R labels represent the side chains. The drawing deliberately does not show individual atoms."
       ],
