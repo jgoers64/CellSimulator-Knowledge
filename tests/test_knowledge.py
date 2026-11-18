@@ -94,6 +94,59 @@ class KnowledgeTests(unittest.TestCase):
             with self.assertRaisesRegex(KnowledgeError, "review record"):
                 read_concepts(root)
 
+    def test_long_form_protein_articles_roundtrip_through_sqlite(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            db_path = build_database(ROOT, Path(tmp) / "protein-articles.sqlite3")
+            store = KnowledgeStore(db_path)
+            for identifier in (
+                "bio:protein", "bio:protein-folding",
+                "bio:protein-domain", "bio:protein-subunit",
+            ):
+                with self.subTest(concept=identifier):
+                    short = store.get(identifier, "simple")
+                    scientific = store.get(identifier, "scientific")
+                    self.assertIsNotNone(short)
+                    self.assertEqual(short["definition"], next(
+                        item["definitions"]["simple"] for item in read_concepts(ROOT)
+                        if item["id"] == identifier
+                    ))
+                    self.assertGreaterEqual(len(short["article"]), 2)
+                    self.assertEqual(short["article"], scientific["article"])
+                    for section in short["article"]:
+                        self.assertTrue(section["heading"])
+                        self.assertTrue(section["paragraphs"])
+                        self.assertTrue(set(section["sources"]).issubset(
+                            {source["id"] for source in short["sources"]}))
+
+    def test_old_compiled_knowledge_index_still_supports_short_definitions(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            db_path = build_database(ROOT, Path(tmp) / "old.sqlite3")
+            with closing(sqlite3.connect(db_path)) as db, db:
+                db.execute("DROP TABLE articles")
+                db.execute("PRAGMA user_version = 1")
+            concept = KnowledgeStore(db_path).get("bio:protein")
+            self.assertTrue(concept["definition"])
+            self.assertEqual(concept["article"], [])
+
+    def test_reject_unattributed_full_article_section(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "concepts").mkdir()
+            (root / "sources.json").write_text(
+                (ROOT / "sources.json").read_text(encoding="utf-8"),
+                encoding="utf-8",
+            )
+            raw = next(item for item in read_concepts(ROOT)
+                       if item["id"] == "bio:protein")
+            raw = json.loads(json.dumps(raw))
+            raw["relations"] = []
+            raw["article"][0]["sources"] = ["ref:missing"]
+            (root / "concepts" / "protein.json").write_text(
+                json.dumps(raw), encoding="utf-8",
+            )
+            with self.assertRaisesRegex(KnowledgeError, "article sections must cite"):
+                read_concepts(root)
+
     def test_empty_search_and_missing_index_are_explicit(self):
         with tempfile.TemporaryDirectory() as tmp:
             store = KnowledgeStore(Path(tmp) / "none.db")
