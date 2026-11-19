@@ -125,6 +125,41 @@
       "id": "ref:ncbi-eicosanoids",
       "label": "NCBI Bookshelf — Signaling Molecules and Their Receptors: Eicosanoids",
       "url": "https://www.ncbi.nlm.nih.gov/books/NBK9924/"
+    },
+    {
+      "id": "ref:rcsb-atp-synthase-full",
+      "label": "RCSB PDB 8H9S — Human ATP synthase, combined state 1",
+      "url": "https://www.rcsb.org/structure/8H9S"
+    },
+    {
+      "id": "ref:rcsb-atp-synthase-f1",
+      "label": "RCSB PDB 8H9E — Human ATP synthase F₁ catalytic domain, state 1",
+      "url": "https://www.rcsb.org/structure/8H9E"
+    },
+    {
+      "id": "ref:atp-synthase-human-2023",
+      "label": "Zhou et al., Structure of the human ATP synthase (2023)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37244256/"
+    },
+    {
+      "id": "ref:atp-synthase-ncbi",
+      "label": "NCBI Bookshelf — The Mechanism of Oxidative Phosphorylation",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK9885/"
+    },
+    {
+      "id": "ref:atp-synthase-review",
+      "label": "Structure and mechanisms of F-type ATP synthases (2019)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30901262/"
+    },
+    {
+      "id": "ref:uniprot-atp5f1b",
+      "label": "UniProt P06576 — ATP synthase F₁ subunit beta, human",
+      "url": "https://www.uniprot.org/uniprotkb/P06576/entry"
+    },
+    {
+      "id": "ref:uniprot-atp5f1a",
+      "label": "UniProt P25705 — ATP synthase F₁ subunit alpha, human",
+      "url": "https://www.uniprot.org/uniprotkb/P25705/entry"
     }
   ]
 }
