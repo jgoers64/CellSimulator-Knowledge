@@ -118,6 +118,38 @@ class KnowledgeTests(unittest.TestCase):
                         self.assertTrue(set(section["sources"]).issubset(
                             {source["id"] for source in short["sources"]}))
 
+    def test_complete_atp_synthase_lesson_has_verified_structures_and_terms(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            database = build_database(ROOT, Path(tmp) / "atp-synthase.sqlite3")
+            store = KnowledgeStore(database)
+            lesson = store.get("bio:atp-synthase")
+            self.assertIsNotNone(lesson)
+            self.assertEqual(lesson["status"], "source_checked")
+            self.assertEqual(len(lesson["article"]), 9)
+            self.assertEqual(
+                [section["illustration"] for section in lesson["article"]
+                 if "illustration" in section],
+                ["atp-synthase-rotary-motor", "atp-synthase-binding-change"],
+            )
+            sources = {source["id"] for source in lesson["sources"]}
+            self.assertIn("ref:rcsb-atp-synthase-full", sources)
+            self.assertIn("ref:rcsb-atp-synthase-f1", sources)
+            self.assertTrue(all(set(s["sources"]).issubset(sources)
+                                for s in lesson["article"]))
+            self.assertEqual(store.resolve("Complex V"), ["bio:atp-synthase"])
+            for name, identifier in (
+                ("rotor", "bio:rotor"), ("stator", "bio:stator"),
+                ("conformational change", "bio:conformational-change"),
+                ("cristae", "bio:cristae"),
+                ("proton gradient", "bio:proton-gradient"),
+            ):
+                with self.subTest(term=name):
+                    self.assertEqual(store.resolve(name), [identifier])
+                    self.assertTrue(store.get(identifier)["sources"])
+            scientific = store.get("bio:atp-synthase", "scientific")
+            self.assertEqual(scientific["article"], lesson["article"])
+            self.assertNotEqual(scientific["definition"], lesson["definition"])
+
     def test_protein_article_illustration_ids_roundtrip_through_index(self):
         with tempfile.TemporaryDirectory() as tmp:
             db_path = build_database(ROOT, Path(tmp) / "illustrated.sqlite3")
