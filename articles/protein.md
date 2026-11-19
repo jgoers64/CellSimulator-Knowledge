@@ -1,6 +1,10 @@
 # Proteins
 *Understanding the molecular machinery of life*
 
+## Definition
+
+A protein is a biological molecule composed of one or more chains of amino acids.
+
 Proteins are among the most important and versatile molecules found in living organisms. They participate in nearly every biological process, from the chemical reactions that sustain metabolism to the movements of muscles and the transmission of signals between cells.
 
 Despite their extraordinary diversity, proteins share a common chemical foundation. They are constructed from amino acids joined into chains, which can fold and assemble into elaborate three-dimensional structures. The chemical properties and arrangement of these amino acids allow proteins to recognize other molecules, catalyze reactions, form structures, and respond to changes in their surroundings.
@@ -11,7 +15,7 @@ This chapter introduces these principles, beginning with the chemistry of amino 
 
 ---
 
-# 1. Introduction to Proteins
+# 1. Molecular Composition
 
 ## 1.1 What Is a Protein?
 
@@ -41,25 +45,7 @@ Proteins also participate in the storage, expression, and maintenance of genetic
 
 The same underlying principle connects these very different activities: the arrangement of atoms within a protein determines the chemical interactions it can form.
 
-## 1.3 Proteins Are Dynamic Molecules
-
-Although proteins are often illustrated as stationary three-dimensional structures, they are constantly undergoing molecular motion.
-
-Their atoms vibrate, chemical groups rotate, and flexible regions change position. Some proteins alternate between distinct conformations as they bind molecules, release products, or respond to regulatory signals.
-
-These movements are not merely incidental. They are often essential to protein function.
-
-For example, an enzyme may rearrange part of its structure when a substrate binds. A membrane transporter may alternate between outward-facing and inward-facing conformations to move a substance across a membrane.
-
-A protein's biological behavior therefore depends not only on its structure, but also on the range of conformations it can adopt and the conditions in which it exists.
-
-**[Future visual 1: An interactive protein model showing the difference between a stationary structure and a series of conformational states. The caption should explain that an experimentally determined structure is a model of a particular state, not a complete record of molecular movement.]**
-
----
-
-# 2. Amino Acids
-
-## 2.1 The Chemical Structure of Amino Acids
+## 1.3 The Chemical Structure of Amino Acids
 
 Amino acids are the fundamental building blocks of proteins.
 
@@ -80,7 +66,7 @@ This illustrates an important chemical principle: the charge of a molecular grou
 
 **[Future visual 2: A labeled molecular diagram of a generic amino acid. Identify the alpha carbon, amino group, carboxyl group, hydrogen, and R group. An optional interactive view could let readers replace the R group with those of individual amino acids.]**
 
-## 2.2 The 20 Standard Amino Acids
+## 1.4 The 20 Standard Amino Acids
 
 Proteins are primarily constructed from 20 standard amino acids.
 
@@ -134,7 +120,7 @@ Histidine is particularly interesting because its side chain can change protonat
 
 These categories describe typical behavior, not absolute rules. The protonation and interactions of individual residues can be altered by their immediate molecular surroundings.
 
-## 2.3 Amino Acid Stereochemistry
+## 1.5 Amino Acid Stereochemistry
 
 Most amino acids possess a chiral alpha carbon, meaning they can exist in two mirror-image configurations.
 
@@ -144,7 +130,7 @@ Glycine is the exception among the standard amino acids because its alpha carbon
 
 Stereochemistry matters because biological interactions occur in three-dimensional space. Two molecules that contain the same atoms and bonds but differ in their spatial arrangement may interact very differently with enzymes or receptors.
 
-## 2.4 Amino Acids Beyond the Standard Twenty
+## 1.6 Amino Acids Beyond the Standard Twenty
 
 Although the standard genetic code primarily uses 20 amino acids, biology contains additional amino acids and amino acid derivatives.
 
@@ -154,11 +140,7 @@ Furthermore, proteins can undergo chemical modifications after synthesis, creati
 
 The standard set of 20 amino acids is therefore the foundation of protein chemistry, but it does not encompass every amino acid-related structure found in living organisms.
 
----
-
-# 3. Peptide Bonds and Polypeptides
-
-## 3.1 How Amino Acids Are Connected
+## 1.7 How Amino Acids Are Connected
 
 Individual amino acids become part of a polypeptide when they are joined by peptide bonds.
 
@@ -176,7 +158,7 @@ Its side chains extend away from this backbone and contribute much of the chemic
 
 **[Future visual 3: Two amino acids becoming joined by a peptide bond, followed by a short polypeptide showing its repeating N–Cα–C backbone and projecting side chains.]**
 
-## 3.2 Directionality of Polypeptide Chains
+## 1.8 Directionality of Polypeptide Chains
 
 A polypeptide has two chemically distinct ends.
 
@@ -188,7 +170,7 @@ This directionality is fundamental to protein synthesis. During translation, the
 
 Directionality also provides a consistent reference for discussing residue positions, structural features, and chemical modifications.
 
-## 3.3 Why Peptide Bonds Restrict Movement
+## 1.9 Why Peptide Bonds Restrict Movement
 
 A peptide bond is not freely rotatable in the same way as an ordinary carbon–carbon single bond.
 
@@ -204,7 +186,7 @@ Not all combinations of these angles are possible because atoms would otherwise 
 
 These geometric restrictions strongly influence the structures that polypeptide chains can form.
 
-## 3.4 Sequence and Molecular Identity
+## 1.10 Sequence and Molecular Identity
 
 A polypeptide's sequence specifies the identity and order of its amino acid residues.
 
@@ -218,9 +200,9 @@ However, sequence alone does not completely describe a functional protein. Its f
 
 ---
 
-# 4. Protein Structure
+# 2. Protein Structure
 
-## 4.1 Four Levels of Structural Organization
+## 2.1 Four Levels of Structural Organization
 
 Protein structure is conventionally described using four levels: primary, secondary, tertiary, and quaternary.
 
@@ -278,7 +260,7 @@ Not every protein possesses quaternary structure. Proteins containing only one p
 
 **[Future visual 5: Four coordinated illustrations showing a sequence, secondary structure, folded polypeptide, and multi-subunit assembly. The same example should be used across levels wherever scientifically appropriate.]**
 
-## 4.2 The Chemical Interactions Stabilizing Protein Structure
+## 2.2 The Chemical Interactions Stabilizing Protein Structure
 
 Protein structure emerges from the combined effects of several physical interactions.
 
@@ -294,7 +276,7 @@ The **hydrophobic effect** describes the tendency of nonpolar molecular surfaces
 
 None of these effects operates in isolation. Their relative contributions depend on the protein's structure, surrounding solvent, temperature, ionic conditions, and chemical environment.
 
-## 4.3 Different Types of Protein Architecture
+## 2.3 Different Types of Protein Architecture
 
 Proteins do not all resemble compact spherical objects.
 
@@ -310,9 +292,23 @@ Protein architecture is therefore highly diverse and closely related to the envi
 
 ---
 
-# 5. Protein Folding
+# 3. Protein Folding and Dynamics
 
-## 5.1 How Does a Polypeptide Become a Functional Protein?
+## 3.1 Proteins Are Dynamic Molecules
+
+Although proteins are often illustrated as stationary three-dimensional structures, they are constantly undergoing molecular motion.
+
+Their atoms vibrate, chemical groups rotate, and flexible regions change position. Some proteins alternate between distinct conformations as they bind molecules, release products, or respond to regulatory signals.
+
+These movements are not merely incidental. They are often essential to protein function.
+
+For example, an enzyme may rearrange part of its structure when a substrate binds. A membrane transporter may alternate between outward-facing and inward-facing conformations to move a substance across a membrane.
+
+A protein's biological behavior therefore depends not only on its structure, but also on the range of conformations it can adopt and the conditions in which it exists.
+
+**[Future visual 1: An interactive protein model showing the difference between a stationary structure and a series of conformational states. The caption should explain that an experimentally determined structure is a model of a particular state, not a complete record of molecular movement.]**
+
+## 3.2 How Does a Polypeptide Become a Functional Protein?
 
 After or during synthesis, many polypeptides acquire three-dimensional arrangements that allow them to function.
 
@@ -324,7 +320,7 @@ For many proteins, a particular folded state is thermodynamically favorable unde
 
 However, a protein does not generally discover that structure by testing every possible arrangement one after another. Folding occurs through complex, interconnected pathways on an energy landscape.
 
-## 5.2 The Protein Folding Energy Landscape
+## 3.3 The Protein Folding Energy Landscape
 
 A useful way to understand folding is through the concept of a **free-energy landscape**.
 
@@ -340,7 +336,7 @@ Importantly, the lowest-energy state of an isolated chain is not always the rele
 
 **[Future visual 6: A simplified free-energy landscape showing an unfolded ensemble, intermediate conformations, folding barriers, and a native-state basin. Explain that the diagram represents free energy and molecular possibilities rather than a literal physical funnel.]**
 
-## 5.3 Molecular Chaperones
+## 3.4 Molecular Chaperones
 
 Some proteins can fold successfully without dedicated folding helpers. Others require assistance to fold efficiently or avoid inappropriate interactions.
 
@@ -356,7 +352,7 @@ Chaperonins provide specialized environments in which certain proteins can fold 
 
 Chaperones generally do not supply a detailed blueprint of the final fold. Instead, they influence the conditions and pathways through which folding occurs.
 
-## 5.4 Protein Misfolding and Aggregation
+## 3.5 Protein Misfolding and Aggregation
 
 Not every polypeptide reaches or maintains an appropriate functional state.
 
@@ -372,7 +368,7 @@ However, aggregation is not always equivalent to disease, and the toxicity of a 
 
 Cells possess numerous systems for limiting inappropriate aggregation, refolding recoverable proteins, and removing proteins that cannot be restored to suitable states.
 
-## 5.5 Intrinsically Disordered Proteins
+## 3.6 Intrinsically Disordered Proteins
 
 An important exception to the traditional image of protein folding is the existence of intrinsically disordered proteins and protein regions.
 
@@ -388,9 +384,121 @@ Consequently, a lack of stable structure does not imply a lack of function.
 
 ---
 
-# 6. Protein Synthesis
+# 4. Biological Functions
 
-## 6.1 From Genetic Information to Protein
+## 4.1 The Relationship Between Structure and Function
+
+Proteins accomplish biological tasks through interactions between their atoms and those of surrounding molecules.
+
+A protein may recognize a particular molecular structure, bind a chemical group, stabilize a reaction intermediate, or undergo a conformational change.
+
+The ability to perform these activities depends on the chemistry and three-dimensional organization of its structure.
+
+However, protein function is not determined by shape alone.
+
+Electrical charges, hydrogen-bonding capabilities, solvent conditions, conformational flexibility, and the availability of binding partners all influence molecular behavior.
+
+## 4.2 Enzymes
+
+Enzymes are biological catalysts that accelerate chemical reactions.
+
+Most enzymes are proteins, although certain RNA molecules can also catalyze reactions.
+
+An enzyme commonly contains an **active site**, a region where substrates bind and the chemical reaction occurs.
+
+The arrangement of atoms within the active site can stabilize the transition state of a reaction, provide suitable acid-base groups, orient substrates, or participate directly in chemical transformations.
+
+By lowering the activation free-energy barrier, an enzyme increases the rate at which a reaction proceeds.
+
+An enzyme does not change the overall free-energy difference between reactants and products or the equilibrium position of the reaction it catalyzes.
+
+Many enzymes require non-protein components, known as **cofactors**. These may include metal ions or organic molecules such as derivatives of vitamins.
+
+## 4.3 Molecular Recognition and Binding
+
+Proteins frequently bind other molecules through multiple chemical interactions.
+
+A molecule that binds to a protein is called a **ligand**.
+
+Ligands may include small metabolites, hormones, ions, nucleic acids, or other proteins.
+
+Binding specificity arises from the compatibility between the chemical and structural properties of the interacting molecules.
+
+Binding is also dynamic. Molecules continually associate and dissociate, with the balance depending on binding affinity, concentration, and environmental conditions.
+
+Protein binding can involve **induced fit**, in which binding is accompanied by a structural rearrangement, or **conformational selection**, in which a ligand preferentially binds an already accessible conformation.
+
+These mechanisms are not necessarily mutually exclusive.
+
+## 4.4 Structural Proteins
+
+Structural proteins contribute to the physical organization and mechanical properties of cells and tissues.
+
+Collagen is an important structural component of connective tissues.
+
+Actin forms filaments that participate in cell shape, movement, and contraction.
+
+Tubulin assembles into microtubules, which help organize intracellular transport and the mitotic spindle.
+
+The mechanical roles of structural proteins often depend on their ability to form larger assemblies, including filaments, fibers, and networks.
+
+## 4.5 Transport Proteins
+
+Transport proteins move substances within organisms or across cellular membranes.
+
+Hemoglobin transports oxygen in the bloodstream by reversibly binding oxygen to heme groups.
+
+Membrane transporters and channels help regulate the movement of ions and other molecules across lipid bilayers.
+
+Some transport proteins permit substances to move down an electrochemical gradient.
+
+Others use energy, either directly or indirectly, to move substances against a gradient.
+
+ATP-dependent pumps provide important examples of active transport.
+
+## 4.6 Receptors and Signaling Proteins
+
+Cells must detect changes in their environment and coordinate their responses.
+
+Receptor proteins participate in this process by recognizing signaling molecules or physical stimuli.
+
+Ligand binding may cause a receptor to change conformation, associate with other proteins, or activate intracellular signaling pathways.
+
+These pathways frequently involve enzymes such as protein kinases, which transfer phosphate groups to target molecules.
+
+Through interconnected signaling networks, cells can regulate metabolism, growth, differentiation, survival, and many other activities.
+
+## 4.7 Molecular Motors
+
+Molecular motor proteins convert chemical energy into mechanical work.
+
+Myosin proteins can generate force through interactions with actin filaments.
+
+Kinesins and dyneins move along microtubules and participate in intracellular transport.
+
+ATP synthase provides another striking example of protein-based molecular machinery. It couples the movement of protons through a membrane-associated motor to conformational changes that enable ATP production.
+
+These systems demonstrate how chemical reactions and coordinated structural changes can produce directed biological motion.
+
+## 4.8 Protein Complexes
+
+Many biological tasks are too complicated to be performed by a single protein acting alone.
+
+Proteins therefore frequently associate into larger molecular assemblies.
+
+These complexes may bring catalytic activities together, coordinate mechanical movements, regulate signaling, or provide structural organization.
+
+Some complexes contain dozens or even hundreds of protein subunits.
+
+Others contain proteins together with RNA, DNA, lipids, or additional molecular components.
+
+The ribosome is an important example of a large ribonucleoprotein assembly whose function depends on the organization and cooperation of numerous molecular parts.
+
+---
+
+# 5. Protein Synthesis and Life Cycle
+
+## 5.1 From Genetic Information to Protein
 
 Cells synthesize proteins through a process called **translation**, which converts the information encoded in messenger RNA into an amino acid sequence.
 
@@ -404,7 +512,7 @@ The mature messenger RNA then serves as a template for protein synthesis.
 
 Importantly, not every RNA molecule is translated. Cells also produce numerous functional noncoding RNAs, including ribosomal RNA and transfer RNA.
 
-## 6.2 The Genetic Code
+## 5.2 The Genetic Code
 
 The information within messenger RNA is read in groups of three nucleotides called **codons**.
 
@@ -418,7 +526,7 @@ The codon AUG commonly functions as a translation start signal and specifies met
 
 Although the genetic code is highly conserved, specialized exceptions exist, including mitochondrial genetic-code variations and the recoding mechanisms used for certain uncommon amino acids.
 
-## 6.3 The Role of the Ribosome
+## 5.3 The Role of the Ribosome
 
 Ribosomes are large molecular assemblies composed of ribosomal RNA and proteins.
 
@@ -438,7 +546,7 @@ Before translation, aminoacyl-tRNA synthetases attach appropriate amino acids to
 
 The accuracy of this attachment is essential for faithful protein synthesis.
 
-## 6.4 The Stages of Translation
+## 5.4 The Stages of Translation
 
 Translation can be divided into initiation, elongation, and termination.
 
@@ -456,7 +564,7 @@ Translation produces a polypeptide chain, but the chain may still require foldin
 
 **[Future visual 7: An interactive ribosome displaying mRNA, tRNA, the A/P/E sites, and the growing polypeptide. Include a step-by-step animation of one elongation cycle.]**
 
-## 6.5 Protein Targeting and Maturation
+## 5.5 Protein Targeting and Maturation
 
 Newly synthesized proteins must reach the cellular environments where they function.
 
@@ -472,7 +580,7 @@ Many subsequently travel through the Golgi apparatus, where they may undergo add
 
 Other proteins contain targeting signals that direct them toward organelles such as mitochondria, peroxisomes, or the nucleus.
 
-## 6.6 Post-Translational Modifications
+## 5.6 Post-Translational Modifications
 
 Protein synthesis does not always end when the final amino acid has been added.
 
@@ -484,123 +592,7 @@ These changes may influence protein folding, molecular interactions, cellular lo
 
 A single gene can therefore give rise to multiple molecular forms of a protein, especially when alternative RNA splicing and post-translational modifications are considered.
 
----
-
-# 7. Protein Functions
-
-## 7.1 The Relationship Between Structure and Function
-
-Proteins accomplish biological tasks through interactions between their atoms and those of surrounding molecules.
-
-A protein may recognize a particular molecular structure, bind a chemical group, stabilize a reaction intermediate, or undergo a conformational change.
-
-The ability to perform these activities depends on the chemistry and three-dimensional organization of its structure.
-
-However, protein function is not determined by shape alone.
-
-Electrical charges, hydrogen-bonding capabilities, solvent conditions, conformational flexibility, and the availability of binding partners all influence molecular behavior.
-
-## 7.2 Enzymes
-
-Enzymes are biological catalysts that accelerate chemical reactions.
-
-Most enzymes are proteins, although certain RNA molecules can also catalyze reactions.
-
-An enzyme commonly contains an **active site**, a region where substrates bind and the chemical reaction occurs.
-
-The arrangement of atoms within the active site can stabilize the transition state of a reaction, provide suitable acid-base groups, orient substrates, or participate directly in chemical transformations.
-
-By lowering the activation free-energy barrier, an enzyme increases the rate at which a reaction proceeds.
-
-An enzyme does not change the overall free-energy difference between reactants and products or the equilibrium position of the reaction it catalyzes.
-
-Many enzymes require non-protein components, known as **cofactors**. These may include metal ions or organic molecules such as derivatives of vitamins.
-
-## 7.3 Molecular Recognition and Binding
-
-Proteins frequently bind other molecules through multiple chemical interactions.
-
-A molecule that binds to a protein is called a **ligand**.
-
-Ligands may include small metabolites, hormones, ions, nucleic acids, or other proteins.
-
-Binding specificity arises from the compatibility between the chemical and structural properties of the interacting molecules.
-
-Binding is also dynamic. Molecules continually associate and dissociate, with the balance depending on binding affinity, concentration, and environmental conditions.
-
-Protein binding can involve **induced fit**, in which binding is accompanied by a structural rearrangement, or **conformational selection**, in which a ligand preferentially binds an already accessible conformation.
-
-These mechanisms are not necessarily mutually exclusive.
-
-## 7.4 Structural Proteins
-
-Structural proteins contribute to the physical organization and mechanical properties of cells and tissues.
-
-Collagen is an important structural component of connective tissues.
-
-Actin forms filaments that participate in cell shape, movement, and contraction.
-
-Tubulin assembles into microtubules, which help organize intracellular transport and the mitotic spindle.
-
-The mechanical roles of structural proteins often depend on their ability to form larger assemblies, including filaments, fibers, and networks.
-
-## 7.5 Transport Proteins
-
-Transport proteins move substances within organisms or across cellular membranes.
-
-Hemoglobin transports oxygen in the bloodstream by reversibly binding oxygen to heme groups.
-
-Membrane transporters and channels help regulate the movement of ions and other molecules across lipid bilayers.
-
-Some transport proteins permit substances to move down an electrochemical gradient.
-
-Others use energy, either directly or indirectly, to move substances against a gradient.
-
-ATP-dependent pumps provide important examples of active transport.
-
-## 7.6 Receptors and Signaling Proteins
-
-Cells must detect changes in their environment and coordinate their responses.
-
-Receptor proteins participate in this process by recognizing signaling molecules or physical stimuli.
-
-Ligand binding may cause a receptor to change conformation, associate with other proteins, or activate intracellular signaling pathways.
-
-These pathways frequently involve enzymes such as protein kinases, which transfer phosphate groups to target molecules.
-
-Through interconnected signaling networks, cells can regulate metabolism, growth, differentiation, survival, and many other activities.
-
-## 7.7 Molecular Motors
-
-Molecular motor proteins convert chemical energy into mechanical work.
-
-Myosin proteins can generate force through interactions with actin filaments.
-
-Kinesins and dyneins move along microtubules and participate in intracellular transport.
-
-ATP synthase provides another striking example of protein-based molecular machinery. It couples the movement of protons through a membrane-associated motor to conformational changes that enable ATP production.
-
-These systems demonstrate how chemical reactions and coordinated structural changes can produce directed biological motion.
-
-## 7.8 Protein Complexes
-
-Many biological tasks are too complicated to be performed by a single protein acting alone.
-
-Proteins therefore frequently associate into larger molecular assemblies.
-
-These complexes may bring catalytic activities together, coordinate mechanical movements, regulate signaling, or provide structural organization.
-
-Some complexes contain dozens or even hundreds of protein subunits.
-
-Others contain proteins together with RNA, DNA, lipids, or additional molecular components.
-
-The ribosome is an important example of a large ribonucleoprotein assembly whose function depends on the organization and cooperation of numerous molecular parts.
-
----
-
-# 8. Protein Regulation
-
-## 8.1 Why Must Proteins Be Regulated?
+## 5.7 Why Must Proteins Be Regulated?
 
 Cells do not need every protein to operate at its maximum activity continuously.
 
@@ -612,7 +604,7 @@ Protein regulation allows cells to coordinate their activities, conserve resourc
 
 Regulation may occur by changing how much protein is present, altering the activity of existing protein molecules, or controlling where those molecules are located.
 
-## 8.2 Allosteric Regulation
+## 5.8 Allosteric Regulation
 
 Allosteric regulation occurs when an interaction at one region of a protein influences the behavior of another region.
 
@@ -628,7 +620,7 @@ This behavior helps hemoglobin load oxygen in the lungs and release it in tissue
 
 **[Future visual 8: Two structural states of a regulated protein, highlighting the regulatory binding site and the functional site. An additional example could show the oxygen-binding behavior of hemoglobin.]**
 
-## 8.3 Phosphorylation
+## 5.9 Phosphorylation
 
 Phosphorylation involves the addition of a phosphate group to a molecule.
 
@@ -642,7 +634,7 @@ Phosphorylation may increase activity, decrease activity, create binding sites, 
 
 Its effect depends on the specific protein and modified residue.
 
-## 8.4 Other Forms of Regulation
+## 5.10 Other Forms of Regulation
 
 Proteins can also be regulated through ligand binding, reversible association with other proteins, proteolytic processing, and changes in cellular location.
 
@@ -656,7 +648,7 @@ Regulatory proteins often participate in interconnected networks rather than iso
 
 For this reason, understanding the behavior of one protein may require studying the broader cellular system in which it operates.
 
-## 8.5 Protein Concentration and Turnover
+## 5.11 Protein Concentration and Turnover
 
 The activity of a protein also depends on how much of it is present.
 
@@ -668,11 +660,7 @@ Alternatively, changes in synthesis or degradation may cause its abundance to ri
 
 Protein abundance and protein activity are related but distinct. A cell may contain a large amount of a particular protein while much of it remains inactive.
 
----
-
-# 9. Protein Degradation
-
-## 9.1 Why Do Cells Destroy Proteins?
+## 5.12 Why Do Cells Destroy Proteins?
 
 Proteins do not remain functional indefinitely.
 
@@ -686,7 +674,7 @@ Proteostasis includes protein synthesis, folding, maintenance, trafficking, and 
 
 Without coordinated protein quality control, cells would accumulate damaged molecules and lose the ability to regulate important biological processes.
 
-## 9.2 The Ubiquitin–Proteasome System
+## 5.13 The Ubiquitin–Proteasome System
 
 One major protein degradation pathway in eukaryotic cells involves ubiquitin and the proteasome.
 
@@ -702,7 +690,7 @@ In ATP-dependent degradation by the 26S proteasome, regulatory components recogn
 
 Ubiquitin can also serve regulatory functions unrelated to degradation, depending on how it is attached and interpreted.
 
-## 9.3 Lysosomal Degradation and Autophagy
+## 5.14 Lysosomal Degradation and Autophagy
 
 Another major degradation route involves lysosomes.
 
@@ -716,7 +704,7 @@ The autophagosome subsequently fuses with a lysosome, allowing its contents to b
 
 These processes are important for recycling cellular components, responding to nutrient availability, and removing damaged material.
 
-## 9.4 Recycling Molecular Components
+## 5.15 Recycling Molecular Components
 
 Protein degradation produces smaller peptides and ultimately amino acids that can be reused or further metabolized.
 
@@ -734,9 +722,9 @@ A denatured protein may retain its intact polypeptide backbone even though it ha
 
 ---
 
-# 10. Protein Research
+# 6. Studying Proteins
 
-## 10.1 How Do Scientists Study Proteins?
+## 6.1 How Do Scientists Study Proteins?
 
 A protein's amino acid sequence provides valuable information, but understanding its behavior often requires experimental investigation.
 
@@ -750,7 +738,7 @@ No single method reveals every property of a protein.
 
 For this reason, reliable biological understanding often emerges from the combination of multiple independent approaches.
 
-## 10.2 X-Ray Crystallography
+## 6.2 X-Ray Crystallography
 
 X-ray crystallography is a method used to investigate the atomic arrangement of molecules.
 
@@ -768,7 +756,7 @@ Some proteins are difficult to crystallize, and flexible regions may not be suff
 
 A crystal structure also represents a molecular model derived from an experimental state, not a complete description of every conformation the protein can adopt.
 
-## 10.3 Cryo-Electron Microscopy
+## 6.3 Cryo-Electron Microscopy
 
 Cryo-electron microscopy, commonly abbreviated **cryo-EM**, allows scientists to investigate biological structures preserved in a frozen, hydrated state.
 
@@ -784,7 +772,7 @@ One advantage is that researchers may be able to distinguish multiple conformati
 
 Nevertheless, the quality and resolution of cryo-EM reconstructions vary, and not every region of a molecule will necessarily be resolved with equal confidence.
 
-## 10.4 Nuclear Magnetic Resonance Spectroscopy
+## 6.4 Nuclear Magnetic Resonance Spectroscopy
 
 Nuclear magnetic resonance, or **NMR**, provides information about the environments and interactions of certain atomic nuclei.
 
@@ -796,7 +784,7 @@ NMR-derived structures are often represented by ensembles of models consistent w
 
 The method can provide valuable information about flexible regions and molecular motion, although investigating very large proteins can be technically challenging.
 
-## 10.5 Mass Spectrometry and Proteomics
+## 6.5 Mass Spectrometry and Proteomics
 
 Mass spectrometry is widely used to identify and characterize proteins.
 
@@ -808,7 +796,7 @@ Proteomics allows researchers to investigate large collections of proteins rathe
 
 This is especially valuable because the proteins present in a cell can vary with cell type, developmental state, environmental conditions, and disease.
 
-## 10.6 Computational Protein Structure Prediction
+## 6.6 Computational Protein Structure Prediction
 
 Computational methods attempt to predict protein structures from biological information.
 
@@ -826,7 +814,7 @@ For example, **pLDDT** describes local prediction confidence, while **predicted 
 
 Even a highly confident model does not establish every aspect of the protein's function, conformational dynamics, or behavior in its native cellular environment.
 
-## 10.7 Molecular Dynamics Simulations
+## 6.7 Molecular Dynamics Simulations
 
 Molecular dynamics is a computational method used to investigate how atoms and molecules move over time.
 
@@ -850,7 +838,7 @@ A simulation must therefore be interpreted as the behavior of a specified comput
 
 **[Future visual 10: The same protein shown as an experimental structure, a predicted structure with confidence coloring, and a short molecular dynamics trajectory. Clearly label what each representation actually establishes.]**
 
-## 10.8 Understanding Scientific Uncertainty
+## 6.8 Understanding Scientific Uncertainty
 
 Protein research is an ongoing scientific process.
 
@@ -888,7 +876,7 @@ Understanding proteins therefore provides a foundation for studying nearly every
 
 ---
 
-# Scientific References and Further Reading
+# References and Further Reading
 
 1. [OpenStax — Biology 2e: Proteins](https://openstax.org/books/biology-2e/pages/3-4-proteins). Introductory protein chemistry and structural organization.
 2. [Alberts et al. — Molecular Biology of the Cell: Proteins](https://www.ncbi.nlm.nih.gov/books/NBK21069/). Detailed molecular explanations of protein structure and function.
@@ -899,4 +887,4 @@ Understanding proteins therefore provides a foundation for studying nearly every
 7. [NCBI Bookshelf — Protein Degradation](https://www.ncbi.nlm.nih.gov/books/NBK9957/). Protein turnover and degradation pathways.
 8. [EMBL-EBI — AlphaFold Protein Structure Database FAQ](https://alphafold.ebi.ac.uk/faq). Predicted protein models and confidence metrics.
 
-*Editorial status: First comprehensive draft. Intended for subsequent scientific review, source-level citation expansion, terminology integration, and figure development before publication.*
+*Editorial status: Long-form article draft. Independent scientific review and claim-level citation verification are pending.*
