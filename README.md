@@ -17,24 +17,36 @@ python main.py
 
 The compiled SQLite index is intentionally **not** committed; `knowledge/build/` is ignored.
 
-## Long-form chapter source files
+## Dictionary definitions and learning articles
 
-The authoritative **Protein** lesson is `articles/protein.md`, a complete
-user-authored educational manuscript with ten chapters, numbered subsections,
-a conclusion, a bibliography and proposed figure locations. The source file is
-preserved as written; the JSON entry `concepts/bio/protein.json` references it
-using `"article_file": "articles/protein.md"`. The small popup definitions
-remain separate.
+A **dictionary entry** supplies separate simple and scientific definitions,
+with canonical concept IDs, source references, and related terms. These are used
+by the floating glossary and quick lookup.
 
-`python -m knowledge.knowledge_store build` validates this path and compiles
-the Markdown into a version-3 read-only SQLite index. The simulator retrieves
-the compiled text and displays one chapter at a time. Previous version-1/2
-indexes can still show concise definitions and the older short articles until
-rebuilt. Do not manually edit the disposable SQLite file.
+A **learning article** contains a textbook-style explanation. The Protein
+article is `articles/protein.md`, linked by `"article_file"` in
+`concepts/bio/protein.json`. It now has six organized chapters (Molecular
+Composition, Protein Structure, Protein Folding and Dynamics, Biological
+Functions, Protein Synthesis and Life Cycle, and Studying Proteins), a conclusion
+and references. The reorganization retained the manuscript's original
+scientific prose and all ten future-figure markers.
 
-Figures are implemented in the parent simulator as offline, clearly labeled
-schematics. The original author's future-visual notes remain intact here so
-additional figures can be developed without losing their scientific intent.
+The compiled SQLite index is version **4**, adding a separate
+`article_metadata` review record. **Definitions can be source-checked while
+the full article is still a draft awaiting independent scientific review.**
+The article's author credit, revision history, version and review information
+are managed in the JSON source, not written into the compiled database by hand.
+
+`python -m knowledge.knowledge_store build` validates the article and review
+metadata, then compiles the source into the read-only index. The simulator
+reads one chapter at a time; older indexes can still display their existing
+definition and article content until rebuilt.
+
+Figures use offline schematics where available. Additional figure descriptions
+remain in the article as editorial placeholders; their scientific content is
+not presented as independently verified research.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the editorial and review workflow.
 
 ## Editorial rules
 
