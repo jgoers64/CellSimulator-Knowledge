@@ -117,5 +117,19 @@
       ]
     }
   ],
-  "article_file": "articles/protein.md"
+  "article_file": "articles/protein.md",
+  "article_metadata": {
+    "version": "1.0-draft",
+    "status": "draft",
+    "author": "Attribution pending",
+    "updated_on": "2026-11-19",
+    "review": null,
+    "history": [
+      {
+        "version": "1.0-draft",
+        "date": "2026-11-19",
+        "note": "Reorganized the existing manuscript into six textbook-style chapters. Original scientific explanations were retained; independent review and figure completion remain pending."
+      }
+    ]
+  }
 }
