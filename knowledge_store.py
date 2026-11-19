@@ -20,6 +20,7 @@ DEFAULT_DB = ROOT / "build" / "knowledge.sqlite3"
 SCHEMA_VERSION = 1
 INDEX_VERSION = 2  # optional extended article content in compiled SQLite
 LONGFORM_INDEX_VERSION = 3  # chapter-length source documents in compiled SQLite
+ARTICLE_EDITORIAL_INDEX_VERSION = 4  # independent article review metadata
 IDENTIFIER = re.compile(r"^[a-z][a-z0-9_]*:[a-z0-9][a-z0-9_.-]*$")
 STATUS = {"draft", "source_checked", "reviewed", "deprecated"}
 LEVELS = {"simple", "scientific"}
@@ -127,6 +128,44 @@ def read_concepts(root: Path = ROOT) -> list[dict]:
             source_text = (root / value).read_text(encoding="utf-8")
             if not source_text.startswith("# ") or len(source_text) > 200_000:
                 raise KnowledgeError(f"{key}: invalid article_file content")
+        if "article_metadata" in raw:
+            if "article_file" not in raw:
+                raise KnowledgeError(f"{key}: article_metadata requires article_file")
+            metadata = raw["article_metadata"]
+            if not isinstance(metadata, dict):
+                raise KnowledgeError(f"{key}: article_metadata must be an object")
+            article_version = _nonempty(metadata.get("version"), f"{key} article version")
+            if re.fullmatch(r"[0-9A-Za-z][0-9A-Za-z_.-]{0,63}", article_version) is None:
+                raise KnowledgeError(f"{key}: invalid article version")
+            article_status = metadata.get("status")
+            if article_status not in {"draft", "source_checked", "reviewed"}:
+                raise KnowledgeError(f"{key}: invalid article review status")
+            _nonempty(metadata.get("author"), f"{key} article author")
+            updated = _nonempty(metadata.get("updated_on"), f"{key} article updated_on")
+            if re.fullmatch(r"\d{4}-\d{2}-\d{2}", updated) is None:
+                raise KnowledgeError(f"{key}: article updated_on must be YYYY-MM-DD")
+            history = metadata.get("history")
+            if not isinstance(history, list) or not history or len(history) > 100:
+                raise KnowledgeError(f"{key}: article revision history required")
+            for entry in history:
+                if not isinstance(entry, dict):
+                    raise KnowledgeError(f"{key}: article history entries must be objects")
+                for field in ("version", "date", "note"):
+                    _nonempty(entry.get(field), f"{key} article history.{field}")
+                if re.fullmatch(r"\d{4}-\d{2}-\d{2}", entry["date"]) is None:
+                    raise KnowledgeError(f"{key}: invalid article history date")
+            if history[-1]["version"] != article_version:
+                raise KnowledgeError(f"{key}: article version must match latest history")
+            review = metadata.get("review")
+            if article_status == "reviewed":
+                if not isinstance(review, dict):
+                    raise KnowledgeError(f"{key}: reviewed article requires review record")
+                for field in ("reviewer", "date", "basis", "version"):
+                    _nonempty(review.get(field), f"{key} article review.{field}")
+                if review["version"] != article_version:
+                    raise KnowledgeError(f"{key}: article review must match current version")
+            elif review is not None:
+                raise KnowledgeError(f"{key}: unreviewed article cannot claim a review")
         if status == "reviewed" and not raw.get("review"):
             raise KnowledgeError(f"{key}: reviewed concepts require a review record")
         if status == "reviewed":
@@ -176,6 +215,9 @@ def _create_schema(db: sqlite3.Connection) -> None:
         CREATE TABLE longform_articles (
             concept_id TEXT PRIMARY KEY REFERENCES concepts(id), markdown TEXT NOT NULL
         );
+        CREATE TABLE article_editorial (
+            concept_id TEXT PRIMARY KEY REFERENCES concepts(id), content TEXT NOT NULL
+        );
         CREATE TABLE citations (
             concept_id TEXT NOT NULL REFERENCES concepts(id),
             source_id TEXT NOT NULL REFERENCES sources(id),
@@ -192,7 +234,7 @@ def _create_schema(db: sqlite3.Connection) -> None:
             reviewer TEXT NOT NULL, reviewed_on TEXT NOT NULL, basis TEXT NOT NULL
         );
         CREATE VIRTUAL TABLE concept_search USING fts5(concept_id UNINDEXED, name, aliases, tokenize='unicode61');
-        PRAGMA user_version = 3;
+        PRAGMA user_version = 4;
     """)
 
 
@@ -231,6 +273,11 @@ def build_database(root: Path = ROOT, destination: Path | None = None) -> Path:
                     db.execute(
                         "INSERT INTO longform_articles VALUES (?, ?)",
                         (key, article_text),
+                    )
+                if raw.get("article_metadata"):
+                    db.execute(
+                        "INSERT INTO article_editorial VALUES (?, ?)",
+                        (key, json.dumps(raw["article_metadata"], ensure_ascii=False)),
                     )
                 if raw.get("status") == "reviewed":
                     review = raw["review"]
@@ -298,10 +345,19 @@ class KnowledgeStore:
                 ).fetchone()
                 if longform_row:
                     article_markdown = longform_row[0]
+            article_metadata = {}
+            if db.execute("PRAGMA user_version").fetchone()[0] >= ARTICLE_EDITORIAL_INDEX_VERSION:
+                metadata_row = db.execute(
+                    "SELECT content FROM article_editorial WHERE concept_id=?",
+                    (concept_id,),
+                ).fetchone()
+                if metadata_row:
+                    article_metadata = json.loads(metadata_row[0])
             return {
                 "id": row[0], "name": row[1], "status": row[2], "definition": row[3],
                 "level": level, "article": article,
                 "article_markdown": article_markdown,
+                "article_metadata": article_metadata,
                 "sources": [{"id": x[0], "label": x[1], "url": x[2]} for x in cites],
                 "relations": [{"type": x[0], "target": x[1]} for x in relations],
             }
