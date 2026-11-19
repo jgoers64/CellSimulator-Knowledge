@@ -2,14 +2,185 @@
   "schema_version": 1,
   "id": "bio:atp-synthase",
   "name": "ATP synthase",
-  "aliases": [],
+  "aliases": [
+    "F-type ATP synthase",
+    "mitochondrial ATP synthase",
+    "ATP synthase complex",
+    "Complex V",
+    "F1Fo ATP synthase"
+  ],
   "definitions": {
     "simple": "A membrane enzyme that uses ion flow to make ATP from ADP and phosphate.",
     "scientific": "ATP synthase is a rotary membrane-associated enzyme that couples ion transport, generally proton flow down an electrochemical gradient, to ATP synthesis from ADP and inorganic phosphate."
   },
   "sources": [
-    "ref:openstax-oxphos"
+    "ref:openstax-oxphos",
+    "ref:atp-synthase-ncbi",
+    "ref:atp-synthase-review",
+    "ref:atp-synthase-human-2023",
+    "ref:rcsb-atp-synthase-full",
+    "ref:rcsb-atp-synthase-f1",
+    "ref:uniprot-atp5f1a",
+    "ref:uniprot-atp5f1b"
   ],
-  "relations": [],
-  "status": "source_checked"
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:chemiosmosis"
+    },
+    {
+      "type": "related",
+      "target": "bio:proton-gradient"
+    },
+    {
+      "type": "related",
+      "target": "bio:electron-transport-chain"
+    },
+    {
+      "type": "related",
+      "target": "bio:rotor"
+    },
+    {
+      "type": "related",
+      "target": "bio:stator"
+    },
+    {
+      "type": "related",
+      "target": "bio:conformational-change"
+    },
+    {
+      "type": "related",
+      "target": "bio:protein-subunit"
+    },
+    {
+      "type": "related",
+      "target": "bio:active-site"
+    },
+    {
+      "type": "related",
+      "target": "chem:atp"
+    },
+    {
+      "type": "related",
+      "target": "chem:adp"
+    }
+  ],
+  "status": "source_checked",
+  "article": [
+    {
+      "heading": "Why ATP Synthase Matters",
+      "paragraphs": [
+        "ATP synthase is a molecular machine that makes ATP (adenosine triphosphate) from ADP and inorganic phosphate. ATP powers many cellular processes, including active transport, biosynthesis, and movement. ATP synthase does not create energy from nothing: it converts energy stored in an ion gradient into chemical free energy in ATP.",
+        "In human cells, the mitochondrial form of ATP synthase is also called respiratory Complex V. It sits near the end of oxidative phosphorylation. The electron transport chain establishes the proton electrochemical gradient that helps drive this enzyme. ATP synthase is a multisubunit assembly, not a single protein chain."
+      ],
+      "sources": [
+        "ref:openstax-oxphos",
+        "ref:atp-synthase-ncbi"
+      ]
+    },
+    {
+      "heading": "Location: The Inner Mitochondrial Membrane",
+      "paragraphs": [
+        "ATP synthase spans the inner mitochondrial membrane. The Fₒ region is embedded in the membrane, while the F₁ catalytic head protrudes toward the mitochondrial matrix, where most of the newly synthesized ATP is released. The membrane is not merely a support: it allows a proton concentration difference and an electrical potential to be maintained between the intermembrane space and the matrix.",
+        "Respiratory-chain complexes I, III, and IV move protons from the matrix toward the intermembrane space as electrons flow to oxygen. This creates the proton-motive force, which has both a chemical component (a pH difference) and an electrical component (membrane potential). ATP synthase provides a coupled path for protons to return toward the matrix. This energy conversion is called chemiosmosis.",
+        "The inner mitochondrial membrane is folded into cristae. ATP synthase assemblies, including dimers, can contribute to crista shape; however, a single static structure model should not be interpreted as a complete picture of its native membrane surroundings."
+      ],
+      "sources": [
+        "ref:openstax-oxphos",
+        "ref:atp-synthase-ncbi",
+        "ref:atp-synthase-review"
+      ]
+    },
+    {
+      "heading": "An Enzyme Built from Two Coupled Rotary Motors",
+      "paragraphs": [
+        "ATP synthase has two broad sectors. Fₒ contains the membrane rotor and proton pathway, including the c-subunit ring and the neighboring a-subunit. F₁ contains a catalytic head with three alpha and three beta subunits arranged around the central gamma-containing stalk. The beta subunits carry the principal catalytic sites, while the alpha subunits also help organize and stabilize the assembly.",
+        "As protons traverse pathways associated with the a-subunit, protonation and deprotonation at the c-ring help drive rotation. The c-ring and central stalk are parts of the rotor. The peripheral stalk helps keep the alpha-beta catalytic head from simply rotating together with it and acts as part of the stator. Torque is therefore transmitted through the central stalk while the catalytic head remains anchored.",
+        "These parts are assembled from distinct protein subunits. For example, the human gene ATP5F1A encodes an F₁ alpha subunit and ATP5F1B encodes an F₁ beta subunit. Loading either one individually would not display the whole ATP synthase complex."
+      ],
+      "illustration": "atp-synthase-rotary-motor",
+      "sources": [
+        "ref:atp-synthase-review",
+        "ref:atp-synthase-human-2023",
+        "ref:uniprot-atp5f1a",
+        "ref:uniprot-atp5f1b"
+      ]
+    },
+    {
+      "heading": "How Proton Flow Becomes ATP",
+      "paragraphs": [
+        "First, the electron transport chain builds the proton electrochemical gradient. Next, protons moving down that gradient interact with the membrane motor of ATP synthase. Their passage promotes rotation of the c-ring relative to its surrounding stator. Because the c-ring is mechanically coupled to the central stalk, this turns the stalk within the F₁ head.",
+        "As the central stalk rotates, its asymmetric interactions with the three beta catalytic subunits alter the shapes of their active sites. Those conformational changes change how tightly the sites bind ADP, inorganic phosphate, and ATP. At one stage a site can bind substrates, at another it favors ATP formation, and a more open conformation allows product release. The complete cycle is coordinated across three catalytic sites rather than happening simultaneously in exactly the same way at every beta subunit.",
+        "One full rotation of the central stalk corresponds to three major 120-degree catalytic transitions around the F₁ head, associated with three ATP-producing cycles. Real enzymes can also exhibit smaller steps, elastic deformation, transient pauses, and alternate states. A drawing of a fixed conformation is not a measurement of the time spent in any state."
+      ],
+      "illustration": "atp-synthase-binding-change",
+      "sources": [
+        "ref:atp-synthase-ncbi",
+        "ref:atp-synthase-review",
+        "ref:atp-synthase-human-2023"
+      ]
+    },
+    {
+      "heading": "The Role of the Alpha and Beta Subunits",
+      "paragraphs": [
+        "The F₁ head is often summarized as an alpha₃beta₃ assembly. The three beta subunits are chemically equivalent by sequence, yet occupy different conformations at a given moment because they interact differently with the asymmetric central stalk. This is a key reason structure and motion are so closely linked to ATP production.",
+        "Alpha and beta do not perform identical jobs. Their interfaces and nucleotide-binding properties contribute to the overall catalytic mechanism, but the beta subunits contain the principal catalytic sites. A beta subunit removed from the intact motor cannot demonstrate the mechanical coupling that exists in the entire assembly.",
+        "Gene symbols such as ATP5F1A and ATP5F1B refer to individual subunit identities. PDB identifiers such as 8H9S describe particular experimentally determined structures; they are not interchangeable with gene names."
+      ],
+      "sources": [
+        "ref:uniprot-atp5f1a",
+        "ref:uniprot-atp5f1b",
+        "ref:atp-synthase-human-2023"
+      ]
+    },
+    {
+      "heading": "What the Experimental Structures Actually Show",
+      "paragraphs": [
+        "The 2023 human ATP synthase cryo-electron microscopy study reported several rotational states. RCSB PDB 8H9S is a combined human ATP synthase structure assigned to state 1. It includes many interacting subunits and is suitable as a static reference for how the molecular machine is arranged, but a single deposited state does not constitute a moving simulation.",
+        "RCSB PDB 8H9E is specifically the human F₁ domain in state 1. It is useful when studying the alpha-beta catalytic head, but it omits much of the membrane motor. Distinguish it from 8H9S, which represents a much larger complex. Neither entry by itself supplies all the lipids, solvent, protonation states, or force-field parameters that would be needed for reliable molecular dynamics.",
+        "Even experimental structural maps have limitations in resolution, flexible-region coverage, sample conditions, and refinement. Molecular details displayed in CellSimulator come from the deposited coordinate file; absent partners or unresolved atoms must not be filled in by guesswork."
+      ],
+      "sources": [
+        "ref:rcsb-atp-synthase-full",
+        "ref:rcsb-atp-synthase-f1",
+        "ref:atp-synthase-human-2023"
+      ]
+    },
+    {
+      "heading": "How Much Proton Movement Is Needed?",
+      "paragraphs": [
+        "An important physical quantity is the number of proton-binding c subunits in the membrane rotor. In human mitochondrial ATP synthase, the c ring is generally described as having eight c subunits. In an ideal tightly coupled cycle, rotation of this c₈ ring can be related to roughly eight translocated protons for three catalytic ATP synthesis events. That gives a motor-only ratio of about 8/3, or approximately 2.7 protons per ATP.",
+        "This is not the same as a universal measured cost of supplying ATP to the cytosol. Phosphate import, adenine nucleotide exchange, leaks, and physiological operating conditions introduce additional energetic requirements. The ratio can also differ across species because c-ring sizes differ. It should therefore not be treated as a fixed constant for every ATP synthase in every organism."
+      ],
+      "sources": [
+        "ref:atp-synthase-review",
+        "ref:atp-synthase-ncbi"
+      ]
+    },
+    {
+      "heading": "Reverse Operation and Biological Regulation",
+      "paragraphs": [
+        "ATP synthase is reversible in principle. When the electrochemical gradient is too weak relative to the chemical potential of ATP, the enzyme can hydrolyze ATP and drive proton movement in the opposite direction. In mitochondria this reverse activity is regulated, including by the inhibitory protein IF₁, so the behavior of the complex depends on its biochemical context.",
+        "Disruptions to ATP synthase assembly, catalytic coupling, or the inner membrane can reduce oxidative phosphorylation efficiency. The complex is also a useful system for studying how sequence changes destabilize subunit interfaces and affect cellular energy metabolism. A disease association must still be evaluated at the level of the exact gene variant and clinical evidence rather than assumed from a protein model."
+      ],
+      "sources": [
+        "ref:atp-synthase-review",
+        "ref:atp-synthase-human-2023",
+        "ref:atp-synthase-ncbi"
+      ]
+    },
+    {
+      "heading": "Studying ATP Synthase in CellSimulator",
+      "paragraphs": [
+        "Start with the experimental human complex (8H9S) to understand its overall organization. Compare it with the isolated human F₁ domain (8H9E) to focus on the catalytic alpha-beta head. You can also search the human proteome for ATP5F1A and ATP5F1B to locate their individual gene-product records. These are different levels of biological organization and must remain separate in both the catalog and the Learn text.",
+        "The current viewer displays experimentally reported coordinates as a static, view-only molecular structure. It does not simulate the proton gradient, membrane electrostatics, catalytic reaction, ATP release, or rotation. A genuine simulation would need a membrane environment, validated topology and parameters, careful protonation and ion treatment, and adequate sampling. An animation that simply rotates the stalk would be an educational illustration, not a validated molecular-dynamics result."
+      ],
+      "sources": [
+        "ref:rcsb-atp-synthase-full",
+        "ref:rcsb-atp-synthase-f1",
+        "ref:atp-synthase-human-2023",
+        "ref:atp-synthase-review"
+      ]
+    }
+  ]
 }
