@@ -1,8 +1,11 @@
-# CellSimulator Knowledge (version 1)
+# CellSimulator Knowledge — Editorial Guide
 
-A versioned, portable scientific concept store. The **JSON concepts and references** are the editorial source of truth; the SQLite file is a **rebuildable runtime index**, not the place contributors edit definitions.
+A versioned, portable scientific concept store. The **JSON concepts, Markdown
+articles and references** are the editorial source of truth; the SQLite file
+is a **rebuildable runtime index**, not the place to edit definitions.
 
-This directory is intentionally self-contained so it can be moved unchanged into a future `CellSimulator-Knowledge` repository. The GitHub connection currently cannot create a repository; keeping it here permits testing and immediate integration without blocking development.
+This is the independent `CellSimulator-Knowledge` repository, consumed by
+CellSimulator through the `knowledge/` Git submodule.
 
 ## Commands (from CellSimulator root)
 
@@ -15,6 +18,51 @@ python -m unittest knowledge.tests.test_knowledge -v
 ```
 
 Search uses SQLite FTS5. The read-only `KnowledgeStore` adapter exposes `get(id, level)`, `resolve(label)`, and `search(query, limit)`. It loads *only* requested definitions; it never loads all entries into RAM or makes network requests. Missing or ambiguous terms are reported rather than silently guessed.
+
+## Two complementary educational formats
+
+1. **Dictionary entries** in `concepts/<domain>/*.json` provide simple and
+   scientific definitions, related concepts and verifiable source IDs. These
+   power quick lookup and floating term definitions.
+2. **Learning articles** in `articles/*.md` provide textbook-style chapters.
+   The concept entry points to the article using `article_file`. Do not copy
+   an entire lesson into a small popup definition.
+
+An article can remain a scientific **draft** even when its short dictionary
+definitions have been source-checked. Do not conflate the concept's `status`
+with its distinct `article_metadata.status`.
+
+## Editorial review workflow for long-form articles
+
+Use `concepts/bio/protein.json` and `articles/protein.md` as the first
+reference example. Each long-form article's optional `article_metadata` object
+contains:
+
+- `version` — the exact draft or approved article revision.
+- `status` — `draft`, `source_checked`, or `reviewed`.
+- `author` — a credited author or a clear "Attribution pending" placeholder.
+- `updated_on` — the latest edit date (YYYY-MM-DD).
+- `history` — ordered, dated entries recording version and actual changes.
+- `review` — `null` until reviewed, then a record with `reviewer`,
+  `date`, `basis`, and the exact `version` that was checked.
+
+For source checks, inspect the specific claims against scientific references
+and revise unsupported statements. For an independent review, obtain an actual
+reviewer assessment, record its basis and date, and only then set
+`article_metadata.status` to `reviewed`. The validator rejects missing
+reviews and reviews tied to older versions. It validates the presence of
+records, **not** the accuracy or independence of an asserted review.
+
+The Protein manuscript was reorganized from ten chapters into six in the
+November 2026 draft. Its original scientific paragraphs and ten planned
+figure notes were retained. The review metadata explicitly remains
+`draft`; neither a reorganization nor source listings constitute scientific
+approval.
+
+For future articles, aim for a concise definition, logical sequence from
+molecular composition to biological mechanisms, well-labeled figures, source
+references and a recorded revision history. Scientific illustrations must
+distinguish experimental observations from models and simulations.
 
 ## How to add information
 
