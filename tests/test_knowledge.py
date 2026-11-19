@@ -188,14 +188,27 @@ class KnowledgeTests(unittest.TestCase):
     def test_full_user_authored_protein_chapter_roundtrips_without_edits(self):
         source_file = ROOT / "articles" / "protein.md"
         markdown = source_file.read_text(encoding="utf-8")
-        self.assertIn("# 1. Introduction to Proteins", markdown)
-        self.assertIn("# 10. Protein Research", markdown)
-        self.assertIn("# Conclusion", markdown)
+        chapters = [
+            line for line in markdown.splitlines()
+            if line.startswith("# ")
+        ]
+        self.assertEqual(chapters, [
+            "# Proteins",
+            "# 1. Molecular Composition",
+            "# 2. Protein Structure",
+            "# 3. Protein Folding and Dynamics",
+            "# 4. Biological Functions",
+            "# 5. Protein Synthesis and Life Cycle",
+            "# 6. Studying Proteins",
+            "# Conclusion",
+            "# References and Further Reading",
+        ])
+        self.assertIn("## Definition", markdown)
         self.assertEqual(markdown.count("**[Future visual "), 10)
         self.assertEqual(len([
             line for line in markdown.splitlines()
             if line.startswith("## ")
-        ]), 50)
+        ]), 51)
         with tempfile.TemporaryDirectory() as tmp:
             database = build_database(ROOT, Path(tmp) / "full-article.sqlite3")
             concept = KnowledgeStore(database).get("bio:protein")
@@ -204,6 +217,62 @@ class KnowledgeTests(unittest.TestCase):
                 raw["definitions"]["simple"] for raw in read_concepts(ROOT)
                 if raw["id"] == "bio:protein"
             ))
+
+    def test_article_review_record_is_independent_of_dictionary_definitions(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            database = build_database(ROOT, Path(tmp) / "editorial.sqlite3")
+            simple = KnowledgeStore(database).get("bio:protein")
+            self.assertEqual(simple["status"], "source_checked")
+            metadata = simple["article_metadata"]
+            self.assertEqual(metadata["status"], "draft")
+            self.assertEqual(metadata["version"], "1.0-draft")
+            self.assertIsNone(metadata["review"])
+            self.assertTrue(metadata["history"])
+            self.assertEqual(
+                KnowledgeStore(database).get("bio:protein", "scientific")["article_metadata"],
+                metadata,
+            )
+            # Other concepts remain valid without their own long-form metadata.
+            self.assertEqual(
+                KnowledgeStore(database).get("bio:protein-folding")["article_metadata"],
+                {},
+            )
+
+    def test_cannot_mark_article_reviewed_without_matching_review_record(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "concepts").mkdir()
+            (root / "articles").mkdir()
+            (root / "articles" / "protein.md").write_text(
+                (ROOT / "articles" / "protein.md").read_text(encoding="utf-8"),
+                encoding="utf-8",
+            )
+            (root / "sources.json").write_text(
+                (ROOT / "sources.json").read_text(encoding="utf-8"),
+                encoding="utf-8",
+            )
+            protein = json.loads(
+                (ROOT / "concepts" / "bio" / "protein.json").read_text(encoding="utf-8")
+            )
+            protein["relations"] = []
+            protein["article_metadata"]["status"] = "reviewed"
+            (root / "concepts" / "protein.json").write_text(
+                json.dumps(protein), encoding="utf-8",
+            )
+            with self.assertRaisesRegex(KnowledgeError, "requires review record"):
+                read_concepts(root)
+
+            protein["article_metadata"]["review"] = {
+                "reviewer": "Test reviewer",
+                "date": "2026-11-19",
+                "basis": "Test fixture",
+                "version": "old-version",
+            }
+            (root / "concepts" / "protein.json").write_text(
+                json.dumps(protein), encoding="utf-8",
+            )
+            with self.assertRaisesRegex(KnowledgeError, "must match current version"):
+                read_concepts(root)
 
     def test_index_version_two_still_reads_older_short_protein_articles(self):
         with tempfile.TemporaryDirectory() as tmp:
