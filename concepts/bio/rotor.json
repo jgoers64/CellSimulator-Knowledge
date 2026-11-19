@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "bio:rotor",
+  "name": "Rotor",
+  "aliases": [
+    "molecular rotor"
+  ],
+  "definitions": {
+    "simple": "The rotating part of a molecular machine, such as the c-ring and central stalk of ATP synthase.",
+    "scientific": "In rotary enzyme complexes, the rotor is the mechanically coupled set of subunits that turns relative to a more stationary protein framework, transmitting torque between functional regions."
+  },
+  "sources": [
+    "ref:atp-synthase-review",
+    "ref:atp-synthase-human-2023"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:stator"
+    },
+    {
+      "type": "example_of",
+      "target": "bio:protein-subunit"
+    },
+    {
+      "type": "related",
+      "target": "bio:atp-synthase"
+    }
+  ],
+  "status": "source_checked"
+}

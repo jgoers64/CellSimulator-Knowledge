@@ -18,6 +18,8 @@ ROOT = Path(__file__).resolve().parent
 SOURCE_DIR = ROOT / "concepts"
 DEFAULT_DB = ROOT / "build" / "knowledge.sqlite3"
 SCHEMA_VERSION = 1
+INDEX_VERSION = 2  # optional extended article content in compiled SQLite
+LONGFORM_INDEX_VERSION = 3  # chapter-length source documents in compiled SQLite
 IDENTIFIER = re.compile(r"^[a-z][a-z0-9_]*:[a-z0-9][a-z0-9_.-]*$")
 STATUS = {"draft", "source_checked", "reviewed", "deprecated"}
 LEVELS = {"simple", "scientific"}
@@ -88,6 +90,43 @@ def read_concepts(root: Path = ROOT) -> list[dict]:
             raise KnowledgeError(f"{key}: cite registered sources")
         if len(set(cited)) != len(cited):
             raise KnowledgeError(f"{key}: duplicate citations")
+        article = raw.get("article", [])
+        if not isinstance(article, list) or len(article) > 16:
+            raise KnowledgeError(f"{key}: article must be a list of at most 16 sections")
+        section_titles = set()
+        for section in article:
+            if not isinstance(section, dict):
+                raise KnowledgeError(f"{key}: article sections must be objects")
+            heading = _nonempty(section.get("heading"), f"{key} article heading")
+            if heading.casefold() in section_titles:
+                raise KnowledgeError(f"{key}: duplicate article heading {heading}")
+            section_titles.add(heading.casefold())
+            paragraphs = section.get("paragraphs")
+            if (not isinstance(paragraphs, list) or not paragraphs
+                    or len(paragraphs) > 8):
+                raise KnowledgeError(f"{key}: article paragraphs must be a nonempty list")
+            for paragraph in paragraphs:
+                _nonempty(paragraph, f"{key} article paragraph")
+            if "illustration" in section:
+                # Only stable offline illustration IDs are allowed. External
+                # image URLs or filesystem paths never enter the data index.
+                illustration = section["illustration"]
+                if (not isinstance(illustration, str)
+                        or re.fullmatch(r"[a-z][a-z0-9-]{1,63}", illustration) is None):
+                    raise KnowledgeError(f"{key}: invalid article illustration ID")
+            refs = section.get("sources", [])
+            if not isinstance(refs, list) or not refs or any(ref not in cited for ref in refs):
+                raise KnowledgeError(f"{key}: article sections must cite concept sources")
+        if "article_file" in raw:
+            # A concept may have one complete chapter-length source document.
+            # Paths must stay inside this repository's articles directory.
+            value = _nonempty(raw["article_file"], f"{key} article_file")
+            if (re.fullmatch(r"articles/[a-z0-9][a-z0-9_-]*\.md", value) is None
+                    or (root / value).is_symlink()):
+                raise KnowledgeError(f"{key}: invalid article_file path")
+            source_text = (root / value).read_text(encoding="utf-8")
+            if not source_text.startswith("# ") or len(source_text) > 200_000:
+                raise KnowledgeError(f"{key}: invalid article_file content")
         if status == "reviewed" and not raw.get("review"):
             raise KnowledgeError(f"{key}: reviewed concepts require a review record")
         if status == "reviewed":
@@ -131,6 +170,12 @@ def _create_schema(db: sqlite3.Connection) -> None:
         );
         CREATE INDEX labels_lookup ON labels(label);
         CREATE TABLE sources (id TEXT PRIMARY KEY, label TEXT NOT NULL, url TEXT NOT NULL);
+        CREATE TABLE articles (
+            concept_id TEXT PRIMARY KEY REFERENCES concepts(id), content TEXT NOT NULL
+        );
+        CREATE TABLE longform_articles (
+            concept_id TEXT PRIMARY KEY REFERENCES concepts(id), markdown TEXT NOT NULL
+        );
         CREATE TABLE citations (
             concept_id TEXT NOT NULL REFERENCES concepts(id),
             source_id TEXT NOT NULL REFERENCES sources(id),
@@ -147,7 +192,7 @@ def _create_schema(db: sqlite3.Connection) -> None:
             reviewer TEXT NOT NULL, reviewed_on TEXT NOT NULL, basis TEXT NOT NULL
         );
         CREATE VIRTUAL TABLE concept_search USING fts5(concept_id UNINDEXED, name, aliases, tokenize='unicode61');
-        PRAGMA user_version = 1;
+        PRAGMA user_version = 3;
     """)
 
 
@@ -176,6 +221,17 @@ def build_database(root: Path = ROOT, destination: Path | None = None) -> Path:
                     db.execute("INSERT INTO labels VALUES (?,?,?)", (label, key, is_primary))
                 for source_id in raw["sources"]:
                     db.execute("INSERT INTO citations VALUES (?,?)", (key, source_id))
+                if raw.get("article"):
+                    db.execute(
+                        "INSERT INTO articles VALUES (?, ?)",
+                        (key, json.dumps(raw["article"], ensure_ascii=False)),
+                    )
+                if raw.get("article_file"):
+                    article_text = (root / raw["article_file"]).read_text(encoding="utf-8")
+                    db.execute(
+                        "INSERT INTO longform_articles VALUES (?, ?)",
+                        (key, article_text),
+                    )
                 if raw.get("status") == "reviewed":
                     review = raw["review"]
                     db.execute("INSERT INTO reviews VALUES (?,?,?,?)",
@@ -226,9 +282,26 @@ class KnowledgeStore:
                 "SELECT kind,target_id FROM relationships WHERE source_id=? ORDER BY kind,target_id",
                 (concept_id,)
             ).fetchall()
+            article = []
+            # Pre-upgrade SQLite indexes remain usable until an explicit rebuild.
+            if db.execute("PRAGMA user_version").fetchone()[0] >= INDEX_VERSION:
+                article_row = db.execute(
+                    "SELECT content FROM articles WHERE concept_id=?", (concept_id,)
+                ).fetchone()
+                if article_row:
+                    article = json.loads(article_row[0])
+            article_markdown = ""
+            if db.execute("PRAGMA user_version").fetchone()[0] >= LONGFORM_INDEX_VERSION:
+                longform_row = db.execute(
+                    "SELECT markdown FROM longform_articles WHERE concept_id=?",
+                    (concept_id,),
+                ).fetchone()
+                if longform_row:
+                    article_markdown = longform_row[0]
             return {
                 "id": row[0], "name": row[1], "status": row[2], "definition": row[3],
-                "level": level,
+                "level": level, "article": article,
+                "article_markdown": article_markdown,
                 "sources": [{"id": x[0], "label": x[1], "url": x[2]} for x in cites],
                 "relations": [{"type": x[0], "target": x[1]} for x in relations],
             }

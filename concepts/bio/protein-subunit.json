@@ -8,8 +8,40 @@
     "scientific": "A protein subunit is an individual polypeptide component of an oligomeric protein complex, assembled with other subunits through noncovalent contacts or covalent links."
   },
   "sources": [
-    "ref:openstax-proteins"
+    "ref:openstax-proteins",
+    "ref:openstax-oxphos"
   ],
   "relations": [],
-  "status": "source_checked"
+  "status": "source_checked",
+  "article": [
+    {
+      "heading": "One Chain in a Larger Assembly",
+      "paragraphs": [
+        "Some proteins work as a single polypeptide, but others are built from several associated chains. An individual chain in such an assembly is called a protein subunit. Subunits can be copies of the same sequence or different proteins that perform complementary tasks.",
+        "Interfaces between subunits contain many interactions, including hydrogen bonds, electrostatic contacts, and close packing. Subunits can create binding surfaces or communication pathways that no isolated chain would have on its own."
+      ],
+      "sources": [
+        "ref:openstax-proteins"
+      ]
+    },
+    {
+      "heading": "Example: ATP Synthase",
+      "paragraphs": [
+        "Mitochondrial ATP synthase is a multiprotein assembly that couples the movement of protons through a membrane-associated region to ATP production. Its soluble catalytic F1 region includes alpha and beta subunits, but neither an individual alpha chain nor an isolated beta chain represents the complete ATP synthase machine.",
+        "If a viewer loads one ATP synthase subunit, it displays only that protein's recorded or predicted coordinates. To represent the functioning complex, the positions of its other subunits, the membrane context, and the relevant conformational states must also be considered."
+      ],
+      "sources": [
+        "ref:openstax-oxphos"
+      ]
+    },
+    {
+      "heading": "How Subunits Differ from Domains",
+      "paragraphs": [
+        "A subunit is a separate polypeptide chain in an assembly. A domain is a region within a polypeptide, even though the two can look similarly compact in a structural image. This distinction matters when interpreting structures of large molecular machines, receptors, and enzymes."
+      ],
+      "sources": [
+        "ref:openstax-proteins"
+      ]
+    }
+  ]
 }

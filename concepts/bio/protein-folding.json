@@ -11,5 +11,37 @@
     "ref:openstax-proteins"
   ],
   "relations": [],
-  "status": "source_checked"
+  "status": "source_checked",
+  "article": [
+    {
+      "heading": "Why a Chain Folds",
+      "paragraphs": [
+        "A polypeptide is flexible when its amino acids are first joined, but it does not normally remain an unrestricted chain. Interactions involving its backbone, side chains, and surrounding solvent favor some conformations over others. In an aqueous environment, many nonpolar side chains tend to become buried, while polar or charged groups can form favorable interactions with water or with other parts of the protein.",
+        "Folding is not a rigid sequence of preprogrammed bends. A protein samples many conformations, and conditions such as temperature, solution chemistry, binding partners, and the presence of membranes can affect which states are populated. Some proteins contain intrinsically disordered regions that do not settle into one permanent structure."
+      ],
+      "sources": [
+        "ref:openstax-proteins"
+      ]
+    },
+    {
+      "heading": "Levels of Organization",
+      "paragraphs": [
+        "Short-range hydrogen bonds within the peptide backbone help stabilize alpha helices and beta sheets, which are secondary structures. Tertiary structure describes how distant regions of one chain are arranged relative to one another. When multiple polypeptide chains associate into a working assembly, their arrangement contributes to quaternary structure.",
+        "These descriptive levels are useful, but they do not represent four separate forces. Hydrogen bonding, electrostatic interactions, van der Waals contacts, and interactions with the solvent contribute together to a protein's physical behavior."
+      ],
+      "sources": [
+        "ref:openstax-proteins"
+      ]
+    },
+    {
+      "heading": "Folding, Misfolding, and Molecular Models",
+      "paragraphs": [
+        "Cells contain proteins called molecular chaperones that can help other proteins reach or maintain appropriate conformations, especially when exposed hydrophobic surfaces or aggregation create problems. A misfolded protein may lose useful activity or form unwanted associations; however, not every alternative conformation is harmful.",
+        "A three-dimensional protein model is a snapshot or prediction of an arrangement, not a recording of the full folding process. Watching genuine folding in a molecular simulation requires a properly prepared molecular system, physically justified forces, and sufficient sampling. Loading coordinates into a viewer alone does not achieve that."
+      ],
+      "sources": [
+        "ref:openstax-proteins"
+      ]
+    }
+  ]
 }

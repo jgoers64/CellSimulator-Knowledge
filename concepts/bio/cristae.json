@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "bio:cristae",
+  "name": "Mitochondrial cristae",
+  "aliases": [
+    "cristae",
+    "crista"
+  ],
+  "definitions": {
+    "simple": "Folds of the inner mitochondrial membrane that increase its surface area and help organize energy-producing proteins.",
+    "scientific": "Mitochondrial cristae are invaginations of the inner mitochondrial membrane with specialized geometry and protein organization, including oxidative-phosphorylation complexes and ATP synthase assemblies."
+  },
+  "sources": [
+    "ref:atp-synthase-review",
+    "ref:atp-synthase-ncbi"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:atp-synthase"
+    },
+    {
+      "type": "related",
+      "target": "bio:electron-transport-chain"
+    }
+  ],
+  "status": "source_checked"
+}

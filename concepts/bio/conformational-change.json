@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "bio:conformational-change",
+  "name": "Conformational change",
+  "aliases": [
+    "conformational changes"
+  ],
+  "definitions": {
+    "simple": "A change in a molecule's three-dimensional shape without changing the order of its atoms.",
+    "scientific": "A conformational change is a transition between molecular arrangements accessible through rotations and other internal motions without altering covalent connectivity; such transitions can modify binding affinity and catalytic activity."
+  },
+  "sources": [
+    "ref:ncbi-protein-structure",
+    "ref:atp-synthase-ncbi"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:protein-folding"
+    },
+    {
+      "type": "related",
+      "target": "bio:atp-synthase"
+    }
+  ],
+  "status": "source_checked"
+}

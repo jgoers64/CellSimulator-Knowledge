@@ -94,6 +94,177 @@ class KnowledgeTests(unittest.TestCase):
             with self.assertRaisesRegex(KnowledgeError, "review record"):
                 read_concepts(root)
 
+    def test_long_form_protein_articles_roundtrip_through_sqlite(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            db_path = build_database(ROOT, Path(tmp) / "protein-articles.sqlite3")
+            store = KnowledgeStore(db_path)
+            for identifier in (
+                "bio:protein", "bio:protein-folding",
+                "bio:protein-domain", "bio:protein-subunit",
+            ):
+                with self.subTest(concept=identifier):
+                    short = store.get(identifier, "simple")
+                    scientific = store.get(identifier, "scientific")
+                    self.assertIsNotNone(short)
+                    self.assertEqual(short["definition"], next(
+                        item["definitions"]["simple"] for item in read_concepts(ROOT)
+                        if item["id"] == identifier
+                    ))
+                    self.assertGreaterEqual(len(short["article"]), 2)
+                    self.assertEqual(short["article"], scientific["article"])
+                    for section in short["article"]:
+                        self.assertTrue(section["heading"])
+                        self.assertTrue(section["paragraphs"])
+                        self.assertTrue(set(section["sources"]).issubset(
+                            {source["id"] for source in short["sources"]}))
+
+    def test_complete_atp_synthase_lesson_has_verified_structures_and_terms(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            database = build_database(ROOT, Path(tmp) / "atp-synthase.sqlite3")
+            store = KnowledgeStore(database)
+            lesson = store.get("bio:atp-synthase")
+            self.assertIsNotNone(lesson)
+            self.assertEqual(lesson["status"], "source_checked")
+            self.assertEqual(len(lesson["article"]), 9)
+            self.assertEqual(
+                [section["illustration"] for section in lesson["article"]
+                 if "illustration" in section],
+                ["atp-synthase-rotary-motor", "atp-synthase-binding-change"],
+            )
+            sources = {source["id"] for source in lesson["sources"]}
+            self.assertIn("ref:rcsb-atp-synthase-full", sources)
+            self.assertIn("ref:rcsb-atp-synthase-f1", sources)
+            self.assertTrue(all(set(s["sources"]).issubset(sources)
+                                for s in lesson["article"]))
+            self.assertEqual(store.resolve("Complex V"), ["bio:atp-synthase"])
+            for name, identifier in (
+                ("rotor", "bio:rotor"), ("stator", "bio:stator"),
+                ("conformational change", "bio:conformational-change"),
+                ("cristae", "bio:cristae"),
+                ("proton gradient", "bio:proton-gradient"),
+            ):
+                with self.subTest(term=name):
+                    self.assertEqual(store.resolve(name), [identifier])
+                    self.assertTrue(store.get(identifier)["sources"])
+            scientific = store.get("bio:atp-synthase", "scientific")
+            self.assertEqual(scientific["article"], lesson["article"])
+            self.assertNotEqual(scientific["definition"], lesson["definition"])
+
+    def test_protein_article_illustration_ids_roundtrip_through_index(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            db_path = build_database(ROOT, Path(tmp) / "illustrated.sqlite3")
+            article = KnowledgeStore(db_path).get("bio:protein")["article"]
+            illustrations = [
+                section["illustration"] for section in article
+                if "illustration" in section
+            ]
+            self.assertEqual(
+                illustrations,
+                ["protein-peptide-chain", "protein-structure-levels"],
+            )
+            self.assertTrue(all(
+                section["sources"] for section in article
+            ))
+
+    def test_invalid_external_image_reference_is_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "concepts").mkdir()
+            (root / "sources.json").write_text(
+                (ROOT / "sources.json").read_text(encoding="utf-8"),
+                encoding="utf-8",
+            )
+            raw = next(item for item in read_concepts(ROOT)
+                       if item["id"] == "bio:protein")
+            raw = json.loads(json.dumps(raw))
+            raw["relations"] = []
+            raw["article"][0]["illustration"] = "https://example.com/image.png"
+            (root / "concepts" / "protein.json").write_text(
+                json.dumps(raw), encoding="utf-8",
+            )
+            with self.assertRaisesRegex(KnowledgeError, "illustration ID"):
+                read_concepts(root)
+
+    def test_full_user_authored_protein_chapter_roundtrips_without_edits(self):
+        source_file = ROOT / "articles" / "protein.md"
+        markdown = source_file.read_text(encoding="utf-8")
+        self.assertIn("# 1. Introduction to Proteins", markdown)
+        self.assertIn("# 10. Protein Research", markdown)
+        self.assertIn("# Conclusion", markdown)
+        self.assertEqual(markdown.count("**[Future visual "), 10)
+        self.assertEqual(len([
+            line for line in markdown.splitlines()
+            if line.startswith("## ")
+        ]), 50)
+        with tempfile.TemporaryDirectory() as tmp:
+            database = build_database(ROOT, Path(tmp) / "full-article.sqlite3")
+            concept = KnowledgeStore(database).get("bio:protein")
+            self.assertEqual(concept["article_markdown"], markdown)
+            self.assertEqual(concept["definition"], next(
+                raw["definitions"]["simple"] for raw in read_concepts(ROOT)
+                if raw["id"] == "bio:protein"
+            ))
+
+    def test_index_version_two_still_reads_older_short_protein_articles(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            database = build_database(ROOT, Path(tmp) / "version-two.sqlite3")
+            with closing(sqlite3.connect(database)) as connection, connection:
+                connection.execute("DROP TABLE longform_articles")
+                connection.execute("PRAGMA user_version = 2")
+            concept = KnowledgeStore(database).get("bio:protein")
+            self.assertTrue(concept["definition"])
+            self.assertGreaterEqual(len(concept["article"]), 3)
+            self.assertEqual(concept["article_markdown"], "")
+
+    def test_reject_article_source_path_outside_repository(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "concepts").mkdir()
+            (root / "sources.json").write_text(
+                (ROOT / "sources.json").read_text(encoding="utf-8"),
+                encoding="utf-8",
+            )
+            protein = next(
+                raw for raw in read_concepts(ROOT) if raw["id"] == "bio:protein"
+            )
+            protein = json.loads(json.dumps(protein))
+            protein["relations"] = []
+            protein["article_file"] = "../private.md"
+            (root / "concepts" / "protein.json").write_text(
+                json.dumps(protein), encoding="utf-8",
+            )
+            with self.assertRaisesRegex(KnowledgeError, "invalid article_file"):
+                read_concepts(root)
+
+    def test_old_compiled_knowledge_index_still_supports_short_definitions(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            db_path = build_database(ROOT, Path(tmp) / "old.sqlite3")
+            with closing(sqlite3.connect(db_path)) as db, db:
+                db.execute("DROP TABLE articles")
+                db.execute("PRAGMA user_version = 1")
+            concept = KnowledgeStore(db_path).get("bio:protein")
+            self.assertTrue(concept["definition"])
+            self.assertEqual(concept["article"], [])
+
+    def test_reject_unattributed_full_article_section(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "concepts").mkdir()
+            (root / "sources.json").write_text(
+                (ROOT / "sources.json").read_text(encoding="utf-8"),
+                encoding="utf-8",
+            )
+            raw = next(item for item in read_concepts(ROOT)
+                       if item["id"] == "bio:protein")
+            raw = json.loads(json.dumps(raw))
+            raw["relations"] = []
+            raw["article"][0]["sources"] = ["ref:missing"]
+            (root / "concepts" / "protein.json").write_text(
+                json.dumps(raw), encoding="utf-8",
+            )
+            with self.assertRaisesRegex(KnowledgeError, "article sections must cite"):
+                read_concepts(root)
+
     def test_empty_search_and_missing_index_are_explicit(self):
         with tempfile.TemporaryDirectory() as tmp:
             store = KnowledgeStore(Path(tmp) / "none.db")
