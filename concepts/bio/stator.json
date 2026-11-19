@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "bio:stator",
+  "name": "Stator",
+  "aliases": [
+    "molecular stator"
+  ],
+  "definitions": {
+    "simple": "The part of a molecular motor that stays comparatively still while the rotor turns.",
+    "scientific": "The stator is the nonrotating structural assembly of a rotary molecular motor that provides a mechanical reference frame and helps sustain torque transmission; in mitochondrial ATP synthase it includes the catalytic head and peripheral-stalk attachments."
+  },
+  "sources": [
+    "ref:atp-synthase-review",
+    "ref:atp-synthase-human-2023"
+  ],
+  "relations": [
+    {
+      "type": "related",
+      "target": "bio:rotor"
+    },
+    {
+      "type": "related",
+      "target": "bio:atp-synthase"
+    }
+  ],
+  "status": "source_checked"
+}
